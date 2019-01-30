@@ -1,3 +1,28 @@
 .Genre {
 
 }
+
+.Genre {
+    margin: 100px auto;
+    padding: 0;
+    max-width: 1024px;
+    display: flex;
+}
+
+.ContainerGenre > h1 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.ContainerGenre > p {
+    color: #ffffff;
+}
+
+.ContainerGenre {
+    max-width: 100px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid orangered;
+}

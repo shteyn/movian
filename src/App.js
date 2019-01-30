@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import Layout from './hoc/Layout/Layout'
 import {Route, Switch} from "react-router-dom";
-import Films from './Containers/Films/Films'
 import HomePage from './Containers/HomePage/HomePage'
+import Films from './Containers/Films/Films'
 import Actors from './Containers/Actors/Actors'
 import Genre from './Containers/Genre/Genre'
 

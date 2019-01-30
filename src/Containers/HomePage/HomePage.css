@@ -1,5 +1,12 @@
 .HomePage {
     margin: 0;
     padding: 10px;
-    display: block;
+}
+
+.contentPage {
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px whitesmoke;
+    margin-bottom: 10px;
+    height: 200px;
+    padding: 20px;
 }

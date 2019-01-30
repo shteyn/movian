@@ -1,20 +1,9 @@
 .HeaderMenu {
     margin: 0;
+    padding: 0;
     background: rgba(0, 0, 0, .1);
     display: flex;
-    /*justify-content: space-between;*/
-}
-
-.Nav > ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-}
-
-.Nav > ul > li {
-    align-items: end;
-    margin-left: 40px;
+    justify-content: flex-end;
 }
 
 a {
@@ -22,7 +11,9 @@ a {
     color: #bed8d1;
     font-weight: bold;
     font-size: 24px;
+    margin-right: 20px;
 }
+
 a:hover {
     text-decoration: none;
     color: #ffffff;
@@ -31,21 +22,8 @@ a:hover {
     font-size: 24px;
 }
 
-
-.HomePageLink {
-    margin-right: auto;
-    padding: 20px;
+.firstNavLink {
+    position: fixed;
+    left: 10px;
 }
 
-.HomePageLink > a {
-    text-decoration: none;
-}
-
-.LoginFormLink {
-    margin: 0;
-    padding: 20px;
-}
-
-.LoginFormLink > a {
-    text-decoration: none;
-}
