@@ -1,0 +1,51 @@
+.HeaderMenu {
+    margin: 0;
+    background: rgba(0, 0, 0, .1);
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
+.Nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.Nav > ul > li {
+    align-items: end;
+    margin-left: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #bed8d1;
+    font-weight: bold;
+    font-size: 24px;
+}
+a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 1px solid orangered;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.HomePageLink {
+    margin-right: auto;
+    padding: 20px;
+}
+
+.HomePageLink > a {
+    text-decoration: none;
+}
+
+.LoginFormLink {
+    margin: 0;
+    padding: 20px;
+}
+
+.LoginFormLink > a {
+    text-decoration: none;
+}
