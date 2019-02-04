@@ -1,108 +1,63 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-  ListGroup,
-  ListGroupItem,
-  Button
-} from "reactstrap";
+import { Container, ListGroup, ListGroupItem, Button, Media } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import uuid from "uuid";
+import { connect } from "react-redux";
+import { getFilms, deleteFilm } from "../actions/filmAction";
+import propTypes from "prop-types";
 
-export default class FilmsList extends Component {
-  state = {
-    film: []
+class FilmsList extends Component {
+  componentDidMount() {
+    this.props.getFilms();
+  }
+
+  /*****DELETE FILM****
+   **** FIRST STEP
+   ********************/
+  //sends id to filmAction.js
+  deleteFilmBtn = id => {
+    this.props.deleteFilm(id);
   };
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.setState({
-      film: [
-        ...this.state.film,
-        {
-          [event.target.name]: event.target.value
-        }
-      ]
-    });
-  };
-
-  handleInputChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
   render() {
-    const { film } = this.state;
+    const { films } = this.props.film;
     return (
       <Container>
-        <Form onSubmit={this.handleSubmit}>
-          <FormGroup>
-            <Label for="filmName">Film Name</Label>
-            <Input
-              type="text"
-              name="filmName"
-              placeholder="Enter film name..."
-              id="filmName"
-              value={film.filmName}
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="filmDescription">Film Description</Label>
-            <Input
-              type="textarea"
-              name="filmDescription"
-              id="filmDescription"
-              placeholder="Enter film description..."
-              value={film.filmDescription}
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="filmYear">Film's Year</Label>
-            <Input
-              type="text"
-              name="filmYear"
-              id="filmYear"
-              placeholder="Enter a year..."
-              value={film.filmYear}
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="filmGenre"> Genre</Label>
-            <Input
-              type="text"
-              name="filmGenre"
-              id="filmGenre"
-              placeholder="Enter a genre..."
-              value={film.filmGenre}
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="filmActor">Actors</Label>
-            <Input
-              type="text"
-              name="filmActor"
-              id="filmActor"
-              placeholder="Add an actor..."
-              value={film.filmActor}
-              onChange={this.handleInputChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="filmImage">Upload Image</Label>
-            <Input type="file" name="filmImage" id="filmImage" />
-            <FormText color="muted" />
-          </FormGroup>
-          <Button>Submit</Button>
-        </Form>
+        <ListGroup>
+          <TransitionGroup className="films-list">
+            {films.map(({ _id, name, year, description, actor, image }) => (
+              <CSSTransition key={_id} timeout={500} classNames="fade">
+                <ListGroupItem className="mt-4">
+                  <Button
+                    className="remove-btn mr-3 btn-danger"
+                    onClick={this.deleteFilmBtn.bind(this, _id)}
+                  >
+                    &times;
+                  </Button>
+                  <div>{name}</div>
+                  <div>{year}</div>
+                  <div>{description}</div>
+                  <div>{actor}</div>
+                  <div>
+                    <img src={image} alt="" />
+                  </div>
+                </ListGroupItem>
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
+        </ListGroup>
       </Container>
     );
   }
 }
+
+FilmsList.propTypes = {
+  getFilms: propTypes.func.isRequired,
+  film: propTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  film: state.film
+});
+export default connect(
+  mapStateToProps,
+  { getFilms, deleteFilm }
+)(FilmsList);

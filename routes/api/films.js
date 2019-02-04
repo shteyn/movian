@@ -17,16 +17,18 @@ router.get("/", (req, res) => {
  * @process: POST REQUEST to api/films
  * @description: Create(Post) a Film
  * @access: Public
+ * @comes from "client/src/actions/filmAction.js"
  ***/
 router.post("/", (req, res) => {
   const newFilm = new Film({
-    filmName: req.body.filmName,
-    filmYear: req.body.filmYear,
-    filmDescription: req.body.filmDescription,
-    filmGenre: req.body.filmGenre,
-    filmActor: req.body.filmActor
+    name: req.body.name,
+    year: req.body.year,
+    description: req.body.description,
+    actor: req.body.actor,
+    image: req.body.image
   });
   newFilm.save().then(film => res.json(film));
+  console.log(newFilm);
 });
 
 /***
