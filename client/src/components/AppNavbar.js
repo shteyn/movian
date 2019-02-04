@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FilmModal from "./FilmModel";
 
 import {
   Container,
@@ -31,7 +32,9 @@ export default class Example extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="api/films/">Films</NavLink>
+                <NavLink>
+                  <FilmModal />
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="api/actors/">Actors</NavLink>

@@ -3,29 +3,25 @@ const Schema = mongoose.Schema;
 
 /***Creating a Schema***/
 const FilmsSchema = new Schema({
-  filmName: {
+  name: {
     type: String,
     required: true
   },
-  filmYear: {
-    type: Number,
-    required: true
-  },
-  filmDescription: {
+  year: {
     type: String,
     required: true
   },
-  filmGenre: {
+  description: {
     type: String,
     required: true
   },
-  filmActor: {
+  actor: {
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: Date.now
+  image: {
+    type: String,
+    required: true
   }
 });
 
