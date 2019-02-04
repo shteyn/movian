@@ -26,8 +26,11 @@ app.use("/api/films", films); // --> Any request that goes to api/films/* goes t
 
 //Serve static assets if we in prod
 if (process.env.NODE_ENV === "production") {
-  //Set static folder
+  // Exprees will serve up production assets
   app.use(express.static("client/build"));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require("path");
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
