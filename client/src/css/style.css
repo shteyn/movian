@@ -1,27 +1,26 @@
-.FilmsListContainer {
-  height: 100vh;
-  padding: 0; }
-  .FilmsListContainer .films-list {
-    position: relative; }
-  .FilmsListContainer .ListGroupItem {
-    width: 340px;
-    padding: 11px;
-    margin: 14px; }
-  .FilmsListContainer .imgDiv {
+.carouselContainer {
+  max-width: 1500px;
+  margin: auto;
+  height: 500px;
+  display: flex; }
+  .carouselContainer .imgDiv img {
+    height: 150px;
+    width: 158px; }
+  .carouselContainer .CarouselControlPrevious {
+    position: absolute;
+    margin-left: -15%; }
+  .carouselContainer .CarouselControlNext {
+    position: absolute;
+    margin-right: -13%; }
+  .carouselContainer .CarouselItemContainer {
+    background-color: whitesmoke;
     position: relative;
-    padding: 0;
-    margin: 0; }
-  .FilmsListContainer span {
-    font-weight: bold; }
-  .FilmsListContainer button {
-    height: 20px;
-    padding: 4px;
-    line-height: 0.3; }
-    .FilmsListContainer button span {
-      margin: 0;
-      padding: 0;
-      font-weight: bold;
-      font-size: 12px; }
+    width: 180px;
+    padding: 11px; }
+  .carouselContainer .ButtonContainer {
+    display: inline-block; }
+    .carouselContainer .ButtonContainer button {
+      line-height: 0.6; }
 
 .AppNavbarContainer {
   width: 100%;
@@ -31,6 +30,20 @@
   .AppNavbarContainer a {
     color: whitesmoke;
     text-decoration: none; }
+
+.fade-enter {
+  opacity: 0.01; }
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in; }
 
 body {
   background: url("../img/bgmovian.jpg") no-repeat;
