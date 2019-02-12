@@ -4,6 +4,7 @@ import {
   GET_FILMS,
   ADD_FILM,
   DELETE_FILM,
+  UPDATE_FILM,
   FILMS_LOADING
 } from "../actions/types";
 
@@ -12,7 +13,9 @@ const initialState = {
   loading: false
 };
 
+//action has a type attached which is coming from the filmActions.js (e.g. GET_FILMS)
 export default function(state = initialState, action) {
+  console.log("action from reducer", action);
   switch (action.type) {
     case GET_FILMS:
       return {
@@ -20,9 +23,15 @@ export default function(state = initialState, action) {
         films: action.payload,
         loading: false
       };
+    case UPDATE_FILM:
+      return {
+        ...state,
+        films: [action.payload, ...state.films],
+        loading: false
+      };
     /*****DELETE FILM****
      **** THIRD STEP
-     //1. filter() creates a new array, without given id
+     //1. filter() creates and returns a new array, without given id (!==id)
      ********************/
     case DELETE_FILM:
       return {
@@ -33,6 +42,8 @@ export default function(state = initialState, action) {
     case ADD_FILM:
       return {
         ...state,
+        //action.payload - new film
+        // ...state.films - copy of the state that will be updated with new film from action.payload
         films: [action.payload, ...state.films]
       };
     case FILMS_LOADING:

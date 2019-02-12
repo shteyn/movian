@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 const Film = require("../../models/Films"); //--> Bring in Film Model.[We need it to make queries to our DB, like "film.find" or "film.save"]
 
 /***
@@ -10,7 +11,10 @@ const Film = require("../../models/Films"); //--> Bring in Film Model.[We need i
 router.get("/", (req, res) => {
   Film.find()
     .sort({ date: -1 }) //--> sorting films in descending order
-    .then(films => res.json(films));
+    .then(films => {
+      res.json(films);
+      console.log("from films.js router.get", films);
+    });
 });
 
 /***
@@ -27,8 +31,8 @@ router.post("/", (req, res) => {
     actor: req.body.actor,
     image: req.body.image
   });
+  console.log("comes from req.body.name", req.body.name);
   newFilm.save().then(film => res.json(film));
-  console.log(newFilm);
 });
 
 /***
@@ -44,7 +48,40 @@ router.delete("/:id", (req, res) => {
         .then(() => res.json({ success: "Film deleted successfully" }))
     )
     .catch(error => res.status(404).json({ success: "Film is not exists" }));
-  console.log(req.params.id);
 });
 
+/***
+ * @process: GET ONE FILM to api/films:id
+ * @description: GET ONE FILM a Film
+ ***/
+router.get("/:id", (req, res) => {
+  Film.findById(req.params.id)
+    .then(film => {
+      res.json(film), console.log("get only one", film);
+    })
+
+    .catch(error => res.status(404).json({ success: "Film is not exists" }));
+});
+
+/***
+ * @process: UPDATE REQUEST to api/films:id
+ * @description: Update a Film
+ * @access: Public
+ ***/
+
+router.put("/:id", (req, res) => {
+  Film.findByIdAndUpdate(req.params.id, req.body).then(film => {
+    res.json(film);
+    console.log("from router.put", film);
+  });
+});
+/*
+  router.put("/:id", (req, res) => {
+    Film.findByIdAndUpdate(req.params.id, req.body).then(film => {
+      res.json(film[0]);
+      console.log("from router.put", film);
+    });
+  });
+
+*/
 module.exports = router;

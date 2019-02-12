@@ -1,77 +1,68 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
-    Button,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    Input,
-    Label,
-    Form,
-    FormGroup
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Input,
+  Label,
+  Form,
+  FormGroup
 } from "reactstrap";
-import {connect} from "react-redux";
-import {addFilm} from "../actions/filmAction";
+import { connect } from "react-redux";
+//import { getOneFilmData } from "../actions/filmAction";
+import propTypes from "prop-types";
 
-class FilmModel extends Component {
-    state = {
-        modal: false,
-        name: "",
-        year: "",
-        description: "",
-        actor: "",
-        image: ""
-    };
+//Create  getoneid fnc in film action to get and id
+// click btn will give an id like in films and then I will send with updateFilm fnc data back
+// updateFilm fnc will target film with id passing updated object
 
-    //set modal to what ever this not
-    toggle = () => {
-        this.setState({
-            modal: !this.state.modal
-        });
-    };
+class UpdateMovieModal extends Component {
+  state = {
+    modal: false,
+    name: "",
+    year: "",
+    description: "",
+    actor: "",
+    image: ""
+  };
 
-  handleInputChange = event => {
-    console.log(event.target.value);
+  //set modal to what ever this not
+  toggle = () => {
     this.setState({
-      [event.target.name]: event.target.value
+      modal: !this.state.modal
     });
   };
 
   handleSubmit = event => {
     event.preventDefault();
-
-    const newFilm = {
+    const updatedFilmObject = {
       name: this.state.name,
       year: this.state.year,
       description: this.state.description,
       actor: this.state.actor,
       image: this.state.image
     };
-    //add film via addFilm action
-    this.props.addFilm(newFilm);
-    console.log("New film", newFilm);
+    //update film via updateFilm action
+    this.props.updateFilm(updatedFilmObject);
 
     //Close the modal
     this.toggle();
   };
+
   render() {
     return (
       <div>
         <div onClick={this.toggle} className="addMovieBtn">
-          Add Movie
+          Update Movie
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Add a New Movie</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="film">Movie Name</Label>
-                <Input
-                  type="text"
-                  name="name"
-                  id="film"
-                  placeholder="Add new movie"
-                  onChange={this.handleInputChange}
-                />
+                <Input />
               </FormGroup>
               <FormGroup>
                 <Label for="Year">Year</Label>
@@ -113,7 +104,7 @@ class FilmModel extends Component {
                   onChange={this.handleInputChange}
                 />
               </FormGroup>
-              <Button>Submit</Button>
+              <Button>Update</Button>
             </Form>
           </ModalBody>
         </Modal>
@@ -123,9 +114,8 @@ class FilmModel extends Component {
 }
 
 const mapStateToProps = state => ({
-    film: state.film
+  //we are calling film, because we called it like that in our index.js in "/reducers/index.js"
+  film: state.film.films
 });
-export default connect(
-    mapStateToProps,
-    {addFilm}
-)(FilmModel);
+
+export default connect(mapStateToProps)(UpdateMovieModal);
