@@ -25,10 +25,7 @@ class FilmsList extends Component {
    **** FIRST STEP
    ********************/
   //sends id to filmAction.js
-  getFilmDataBtn = id => {
-    this.props.getOneFilmData(id);
-    console.log("ID from update BTN", id);
-  };
+
 
   render() {
     const { films } = this.props.film;
@@ -36,24 +33,24 @@ class FilmsList extends Component {
       <Container>
         <ListGroup>
           <TransitionGroup className="films-list">
-            {films.map(({ _id, name, year, description, actor, image }) => (
-              <CSSTransition key={_id} timeout={500} classNames="fade">
+            {films.map((oneFilm) => (
+              <CSSTransition key={oneFilm._id} timeout={500} classNames="fade">
                 <ListGroupItem className="mt-4">
                   <Button
                     className="remove-btn mr-3 btn-danger"
-                    onClick={this.deleteFilmBtn.bind(this, _id)}
+                    onClick={this.deleteFilmBtn.bind(this, oneFilm._id)}
                   >
                     &times;
                   </Button>
-                  <Button onClick={this.getFilmDataBtn.bind(this, _id)}>
-                    <UpdateMovieModal />
+                  <Button>
+                    <UpdateMovieModal listFilm={oneFilm} />
                   </Button>
-                  <div>{name}</div>
-                  <div>{year}</div>
-                  <div>{description}</div>
-                  <div>{actor}</div>
+                  <div>{oneFilm.name}</div>
+                  <div>{oneFilm.year}</div>
+                  <div>{oneFilm.description}</div>
+                  <div>{oneFilm.actor}</div>
                   <div>
-                    <img src={image} alt="" />
+                    <img src={oneFilm.image} alt="" />
                   </div>
                 </ListGroupItem>
               </CSSTransition>

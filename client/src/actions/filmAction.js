@@ -14,7 +14,7 @@ import {
 export const getFilms = () => dispatch => {
   dispatch(filmsLoading());
   axios.get("api/films").then(res => {
-    console.log("ActionsFile: req.data comes as json from films.api", res.data);
+    //console.log("ActionsFile: req.data comes as json from films.api", res.data);
     dispatch({
       //dispatch to filmReducer.js
       type: GET_FILMS,
@@ -56,6 +56,16 @@ export const deleteFilm = id => dispatch => {
  //1. id comes from "updateFilmBtn" func in FilmsList.js
 //2. Sends the object (type and payload) to the filmReducer.js
  ********************/
+
+export const updateFilm = film => dispatch => {
+  axios.put(`/api/films/${film.id}`, film).then(res => {
+    dispatch({
+      type: UPDATE_FILM,
+      payload: res.data
+    })
+  }
+  );
+};
 
 export const getOneFilmData = id => dispatch => {
   axios.get(`/api/films/${id}`).then(res => {

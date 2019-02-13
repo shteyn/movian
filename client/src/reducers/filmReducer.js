@@ -14,8 +14,7 @@ const initialState = {
 };
 
 //action has a type attached which is coming from the filmActions.js (e.g. GET_FILMS)
-export default function(state = initialState, action) {
-  console.log("action from reducer", action);
+export default function (state = initialState, action) {
   switch (action.type) {
     case GET_FILMS:
       return {
@@ -24,9 +23,10 @@ export default function(state = initialState, action) {
         loading: false
       };
     case UPDATE_FILM:
+      console.log('REDUCER: update film', action.payload)
       return {
         ...state,
-        films: [action.payload, ...state.films],
+        films: [...state.films, action.payload],
         loading: false
       };
     /*****DELETE FILM****
@@ -44,7 +44,7 @@ export default function(state = initialState, action) {
         ...state,
         //action.payload - new film
         // ...state.films - copy of the state that will be updated with new film from action.payload
-        films: [action.payload, ...state.films]
+        films: [...state.films, action.payload]
       };
     case FILMS_LOADING:
       return {
