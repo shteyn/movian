@@ -31,6 +31,7 @@ class FilmModel extends Component {
   };
 
   handleInputChange = event => {
+    console.log(event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -38,6 +39,7 @@ class FilmModel extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     const newFilm = {
       name: this.state.name,
       year: this.state.year,
@@ -47,11 +49,11 @@ class FilmModel extends Component {
     };
     //add film via addFilm action
     this.props.addFilm(newFilm);
+    console.log("New film", newFilm);
 
     //Close the modal
     this.toggle();
   };
-
   render() {
     return (
       <div>
