@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink, Router, Route } from 'react-router-dom';
+//import { Link, NavLink, Router, Route } from 'react-router-dom';
 
 import {
   Button,
@@ -13,13 +13,13 @@ import {
 } from "reactstrap";
 
 class LogIn extends Component {
-  constructor() { 
-    super(); 
+  constructor() {
+    super();
 
     this.state = {
-        email: '', 
-        password: '' 
-    }; 
+      email: '',
+      password: ''
+    };
 
   };
 
@@ -31,19 +31,19 @@ class LogIn extends Component {
   };
 
   handleChange = event => {
-    let target = event.target; 
-    let value = target.type === 'checkbox' ? target.checked : target.value; 
-    let name = target.name; 
+    let target = event.target;
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+    let name = target.name;
 
-    this.setState({ 
-      [name]: value 
-    }); 
+    this.setState({
+      [name]: value
+    });
   };
 
   handleSubmit = event => {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    console.log('The form was submitted with the following data:'); 
+    console.log('The form was submitted with the following data:');
     console.log(this.state);
 
     this.toggle();
@@ -64,28 +64,28 @@ class LogIn extends Component {
               <Button activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</Button>
             </div>
 
-        <br/>
+            <br />
             <Form onSubmit={this.handleSubmit}>
 
               <div>
-                  <FormGroup>
-                  <Label className="FormField__Label" htmlFor="email">E-Mail Address</Label> <br/>
-                    <Input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email"  
-                    value={this.state.email} onChange={this.handleChange} /> 
-                  </FormGroup>
+                <FormGroup>
+                  <Label className="FormField__Label" htmlFor="email">E-Mail Address</Label> <br />
+                  <Input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email"
+                    value={this.state.email} onChange={this.handleChange} />
+                </FormGroup>
               </div>
 
               <div>
-                  <FormGroup>
-                  <Label className="FormField__Label" htmlFor="password">Password</Label> <br/>
-                    <Input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" 
-                    value={this.state.password} onChange={this.handleChange} /> 
-                  </FormGroup>
+                <FormGroup>
+                  <Label className="FormField__Label" htmlFor="password">Password</Label> <br />
+                  <Input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password"
+                    value={this.state.password} onChange={this.handleChange} />
+                </FormGroup>
               </div>
 
-              <div className="FormField"> 
-                  <Button className="FormField__Button mr-20">Sign In</Button>
-              </div> 
+              <div className="FormField">
+                <Button className="FormField__Button mr-20">Sign In</Button>
+              </div>
             </Form>
           </ModalBody>
         </Modal>
