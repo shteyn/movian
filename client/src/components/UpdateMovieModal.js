@@ -10,7 +10,7 @@ import {
   FormGroup
 } from "reactstrap";
 import { connect } from "react-redux";
-//import { getOneFilmData } from "../actions/filmAction";
+import { updateFilm } from "../actions/filmAction";
 import propTypes from "prop-types";
 
 //Create  getoneid fnc in film action to get and id
@@ -18,13 +18,14 @@ import propTypes from "prop-types";
 // updateFilm fnc will target film with id passing updated object
 
 class UpdateMovieModal extends Component {
+
   state = {
     modal: false,
-    name: "",
-    year: "",
-    description: "",
-    actor: "",
-    image: ""
+    name: this.props.listFilm.name,
+    year: this.props.listFilm.year,
+    description: this.props.listFilm.description,
+    actor: this.props.listFilm.actor,
+    image: this.props.listFilm.image
   };
 
   //set modal to what ever this not
@@ -34,9 +35,17 @@ class UpdateMovieModal extends Component {
     });
   };
 
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
   handleSubmit = event => {
     event.preventDefault();
     const updatedFilmObject = {
+      id: this.props.listFilm._id,
       name: this.state.name,
       year: this.state.year,
       description: this.state.description,
@@ -57,21 +66,20 @@ class UpdateMovieModal extends Component {
           Update Movie
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
+
           <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="film">Movie Name</Label>
-                <Input />
+                <Input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
               </FormGroup>
               <FormGroup>
                 <Label for="Year">Year</Label>
                 <Input
                   type="text"
                   name="year"
-                  id="Year"
-                  placeholder="Add a year..."
-                  onChange={this.handleInputChange}
+                  value={this.state.year} onChange={this.handleChange}
                 />
               </FormGroup>
               <FormGroup>
@@ -79,9 +87,7 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="text"
                   name="description"
-                  id="description"
-                  placeholder="Add a description..."
-                  onChange={this.handleInputChange}
+                  value={this.state.description} onChange={this.handleChange}
                 />
               </FormGroup>
               <FormGroup>
@@ -89,9 +95,8 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="text"
                   name="actor"
-                  id="actor"
-                  placeholder="Add an actor..."
-                  onChange={this.handleInputChange}
+                  value={this.state.actor} onChange={this.handleChange}
+
                 />
               </FormGroup>
               <FormGroup>
@@ -99,9 +104,8 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="url"
                   name="image"
-                  id="image"
-                  placeholder="Insert an image URL..."
-                  onChange={this.handleInputChange}
+                  value={this.state.image} onChange={this.handleChange}
+
                 />
               </FormGroup>
               <Button>Update</Button>
@@ -114,8 +118,11 @@ class UpdateMovieModal extends Component {
 }
 
 const mapStateToProps = state => ({
-  //we are calling film, because we called it like that in our index.js in "/reducers/index.js"
-  film: state.film.films
+  film: state.film
 });
+export default connect(
+  mapStateToProps,
+  { updateFilm }
+)(UpdateMovieModal);
 
-export default connect(mapStateToProps)(UpdateMovieModal);
+
