@@ -10,8 +10,9 @@ import {
   FormGroup
 } from "reactstrap";
 import { connect } from "react-redux";
-import { updateFilm } from "../actions/filmAction";
-import propTypes from "prop-types";
+import {updateFilm} from "../actions/filmAction";
+//import { getOneFilmData } from "../actions/filmAction";
+// import PropTypes from "prop-types";
 
 //Create  getoneid fnc in film action to get and id
 // click btn will give an id like in films and then I will send with updateFilm fnc data back
@@ -37,10 +38,10 @@ class UpdateMovieModal extends Component {
 
 
   handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -63,7 +64,7 @@ class UpdateMovieModal extends Component {
     return (
       <div>
         <div onClick={this.toggle} className="addMovieBtn">
-          Update Movie
+          Update
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
 
@@ -124,5 +125,7 @@ export default connect(
   mapStateToProps,
   { updateFilm }
 )(UpdateMovieModal);
+
+ // export default connect(mapStateToProps)(UpdateMovieModal);
 
 

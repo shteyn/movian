@@ -4,7 +4,7 @@ import FilmsList from "./components/FilmsList";
 import { Provider } from "react-redux";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+// import FilmListTest from './components/FilmListTest'
 
 class App extends Component {
   render() {
@@ -13,6 +13,7 @@ class App extends Component {
         <div className="App">
           <AppNavbar />
           <FilmsList />
+          {/*<FilmListTest/>*/}
         </div>
       </Provider>
     );
