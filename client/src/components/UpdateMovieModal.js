@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import { connect } from "react-redux";
 //import { getOneFilmData } from "../actions/filmAction";
-import propTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 //Create  getoneid fnc in film action to get and id
 // click btn will give an id like in films and then I will send with updateFilm fnc data back

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Container, ListGroup, ListGroupItem, Button } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
-import { getFilms, deleteFilm } from "../actions/filmAction";
-import propTypes from "prop-types";
+import { getFilms, deleteFilm, getOneFilmData } from "../actions/filmAction";
+import PropTypes from "prop-types";
+import UpdateMovieModal from './UpdateMovieModal'
 
 class FilmsList extends Component {
   componentDidMount() {
