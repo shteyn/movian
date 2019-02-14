@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilmModal from "./FilmModel";
+import LogIn from "./LogIn";
+import SignUp from "./SignUp";
 
 import {
     Container,
@@ -26,8 +28,8 @@ export default class Example extends Component {
     render() {
         return (
             <Container className="AppNavbarContainer">
-                <Navbar light expand="md" className="md-5">
-                    <NavbarBrand href="/" style={{color: "white"}}>Movian</NavbarBrand>
+                <Navbar color="dark" dark expand="md" className="md-5">
+                    <NavbarBrand href="/" style={{color: "whitesmoke"}}>Movian</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -37,18 +39,25 @@ export default class Example extends Component {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="api/actors/" style={{color: "white"}}>Movie</NavLink>
+                                <NavLink href="api/actors/" style={{color: "whitesmoke"}}>Movie</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="api/genre/" style={{color: "white"}}>Genre</NavLink>
+                                <NavLink href="api/genre/" style={{color: "whitesmoke"}}>Genre</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink>
+                                    <LogIn/>
+                                </NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink href="api/login/" style={{color: "white"}}>Login</NavLink>
+                                <NavLink>
+                                    <SignUp/>
+                                </NavLink>
                             </NavItem>
                         </Nav>
-                    </Collapse>
-                </Navbar>
+                </Collapse>
+            </Navbar>
             </Container>
         );
     }

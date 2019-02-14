@@ -1,34 +1,41 @@
-.carouselContainer {
+.divContainer {
   max-width: 1500px;
   margin: auto;
-  height: 500px;
-  display: flex; }
-  .carouselContainer .imgDiv img {
-    height: 150px;
-    width: 158px; }
-  .carouselContainer .CarouselControlPrevious {
-    position: absolute;
-    margin-left: -15%; }
-  .carouselContainer .CarouselControlNext {
-    position: absolute;
-    margin-right: -13%; }
-  .carouselContainer .CarouselItemContainer {
-    background-color: whitesmoke;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap; }
+  .divContainer .films-list {
+    display: flex;
+    flex-wrap: wrap; }
+  .divContainer .imgDiv img {
+    height: 190px;
+    width: 160px; }
+  .divContainer .md-5 {
+    background: black; }
+  .divContainer .mt-4 {
     width: 180px;
-    padding: 11px; }
-  .carouselContainer .ButtonContainer {
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    background-color: whitesmoke;
+    border: 1px solid #383b43;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .divContainer .ButtonContainer {
     display: inline-block; }
-    .carouselContainer .ButtonContainer button {
+    .divContainer .ButtonContainer button {
+      width: 70px;
+      padding: 4px;
       line-height: 0.6; }
 
 .AppNavbarContainer {
   width: 100%;
   max-width: none;
-  padding: 0;
-  background: rgba(0, 0, 0, 0.3); }
+  padding: 0; }
   .AppNavbarContainer a {
-    color: whitesmoke;
+    color: red;
     text-decoration: none; }
 
 .fade-enter {
@@ -46,5 +53,5 @@
   transition: opacity 1000ms ease-in; }
 
 body {
-  background: url("../img/bgmovian.jpg") no-repeat;
+  background: white;
   background-size: cover; }

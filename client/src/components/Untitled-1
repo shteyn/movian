@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import {
   Button,
   Modal,
@@ -10,23 +11,16 @@ import {
   FormGroup
 } from "reactstrap";
 import { connect } from "react-redux";
-import {updateFilm} from "../actions/filmAction";
-//import { getOneFilmData } from "../actions/filmAction";
-// import PropTypes from "prop-types";
+import { addFilm } from "../actions/filmAction";
 
-//Create  getoneid fnc in film action to get and id
-// click btn will give an id like in films and then I will send with updateFilm fnc data back
-// updateFilm fnc will target film with id passing updated object
-
-class UpdateMovieModal extends Component {
-
+class FilmModel extends Component {
   state = {
     modal: false,
-    name: this.props.listFilm.name,
-    year: this.props.listFilm.year,
-    description: this.props.listFilm.description,
-    actor: this.props.listFilm.actor,
-    image: this.props.listFilm.image
+    name: "",
+    year: "",
+    description: "",
+    actor: "",
+    image: ""
   };
 
   //set modal to what ever this not
@@ -36,51 +30,58 @@ class UpdateMovieModal extends Component {
     });
   };
 
-
-  handleChange = event => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    };
+  handleInputChange = event => {
+    console.log(event.target.value);
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
-    const updatedFilmObject = {
-      id: this.props.listFilm._id,
+
+    const newFilm = {
       name: this.state.name,
       year: this.state.year,
       description: this.state.description,
       actor: this.state.actor,
       image: this.state.image
     };
-    //update film via updateFilm action
-    this.props.updateFilm(updatedFilmObject);
+    //add film via addFilm action
+    this.props.addFilm(newFilm);
+    console.log("New film", newFilm);
 
     //Close the modal
     this.toggle();
   };
-
   render() {
     return (
       <div>
         <div onClick={this.toggle} className="addMovieBtn">
-          Update
+          Add Movie
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-
-          <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Add a New Movie</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="film">Movie Name</Label>
-                <Input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                <Input
+                  type="text"
+                  name="name"
+                  id="film"
+                  placeholder="Add new movie"
+                  onChange={this.handleInputChange}
+                />
               </FormGroup>
               <FormGroup>
                 <Label for="Year">Year</Label>
                 <Input
                   type="text"
                   name="year"
-                  value={this.state.year} onChange={this.handleChange}
+                  id="Year"
+                  placeholder="Add a year..."
+                  onChange={this.handleInputChange}
                 />
               </FormGroup>
               <FormGroup>
@@ -88,7 +89,9 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="text"
                   name="description"
-                  value={this.state.description} onChange={this.handleChange}
+                  id="description"
+                  placeholder="Add a description..."
+                  onChange={this.handleInputChange}
                 />
               </FormGroup>
               <FormGroup>
@@ -96,8 +99,9 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="text"
                   name="actor"
-                  value={this.state.actor} onChange={this.handleChange}
-
+                  id="actor"
+                  placeholder="Add an actor..."
+                  onChange={this.handleInputChange}
                 />
               </FormGroup>
               <FormGroup>
@@ -105,11 +109,12 @@ class UpdateMovieModal extends Component {
                 <Input
                   type="url"
                   name="image"
-                  value={this.state.image} onChange={this.handleChange}
-
+                  id="image"
+                  placeholder="Insert an image URL..."
+                  onChange={this.handleInputChange}
                 />
               </FormGroup>
-              <Button>Update</Button>
+              <Button>Submit</Button>
             </Form>
           </ModalBody>
         </Modal>
@@ -123,9 +128,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
   mapStateToProps,
-  { updateFilm }
-)(UpdateMovieModal);
-
- // export default connect(mapStateToProps)(UpdateMovieModal);
-
-
+  { addFilm }
+)(FilmModel);

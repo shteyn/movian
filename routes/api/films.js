@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
     .sort({ date: -1 }) //--> sorting films in descending order
     .then(films => {
       res.json(films);
-      console.log("from films.js router.get", films);
+      //console.log("from films.js router.get", films);
     });
 });
 
@@ -59,7 +59,6 @@ router.get("/:id", (req, res) => {
     .then(film => {
       res.json(film), console.log("get only one", film);
     })
-
     .catch(error => res.status(404).json({ success: "Film is not exists" }));
 });
 
@@ -68,11 +67,9 @@ router.get("/:id", (req, res) => {
  * @description: Update a Film
  * @access: Public
  ***/
-
 router.put("/:id", (req, res) => {
-  Film.findByIdAndUpdate(req.params.id, req.body).then(film => {
+  Film.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(film => {
     res.json(film);
-    console.log("from router.put", film);
   });
 });
 /*
