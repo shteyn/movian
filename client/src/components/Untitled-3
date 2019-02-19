@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { userService } from '../_services';
 //import { Link, NavLink, Router, Route } from 'react-router-dom';
 
 import {
@@ -16,16 +17,15 @@ class LogIn extends Component {
   constructor() {
     super();
 
+    userService.logout();
+
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      isLoggedIn: false, 
     };
 
   };
-  logout(e) {
-    e.preventDefault();
-    this.props.logout();
-}
 
   //set modal to what ever this not
   toggle = () => {
@@ -55,12 +55,22 @@ class LogIn extends Component {
     this.setState({
       isLoggedIn: true, 
     });
+    const { email, password, returnUrl } = this.state;
 
-    //Close the modal
+    if (!(email && password)) {
+      return;
+  }
+  this.setState({ loading: true });
+  userService.login(email, password)
+      .then(
+          user => {
+              const { from } = this.props.location.state || { from: { pathname: "/" } };
+              this.props.history.push(from);
+          },
+          error => this.setState({ error, loading: false })
+      );
   };
   render() {
-
-    
     const check = this.state.email.match(/^(([^<>()\[\]\\.,;:\s@“]+(\.[^<>()\[\]\\.,;:\s@“]+)*)|(“.+“))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && this.state.password.length > 2
     return (
       <div>

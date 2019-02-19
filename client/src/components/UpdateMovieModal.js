@@ -30,11 +30,19 @@ class UpdateMovieModal extends Component {
   };
 
   //set modal to what ever this not
+ 
   toggle = () => {
     this.setState({
       modal: !this.state.modal
     });
   };
+  
+  // operation()
+  // {
+  //   this.setState({
+  //     showMe: !this.state.showMe
+  //   })
+  // }
 
 
   handleChange = event => {
@@ -63,9 +71,17 @@ class UpdateMovieModal extends Component {
   render() {
     return (
       <div>
+
+
         <div onClick={this.toggle} className="addMovieBtn">
           Update
         </div>
+     
+
+        {/* <div className="FormField"> 
+             <Button  className="FormField__Button mr-20">Log In</Button>
+        </div>  */}
+
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
 
           <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>

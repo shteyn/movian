@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import FilmListTest from './components/FilmListTest'
 
 class App extends Component {
+
+ 
   render() {
     return (
       <Provider store={store}>
