@@ -30,20 +30,21 @@ export default class Example extends Component {
             <Container className="AppNavbarContainer">
                 <Navbar color="dark" dark expand="md" className="md-5">
                     <NavbarBrand href="/" style={{color: "whitesmoke"}}>Movian</NavbarBrand>
+                    {/*<NavbarBrand href="/film-list-test" style={{color: "whitesmoke"}}>FilmsListTest</NavbarBrand>*/}
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink>
-                                    <FilmModal style={{color: "white"}}/>
+                                    <FilmModal style={{color: "white", cursor: "pointer"}}/>
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="api/actors/" style={{color: "whitesmoke"}}>Movie</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="api/genre/" style={{color: "whitesmoke"}}>Genre</NavLink>
-                            </NavItem>
+                            {/*<NavItem>*/}
+                                {/*<NavLink href="api/actors/" style={{color: "whitesmoke"}}>Movie</NavLink>*/}
+                            {/*</NavItem>*/}
+                            {/*<NavItem>*/}
+                                {/*<NavLink href="api/genre/" style={{color: "whitesmoke"}}>Genre</NavLink>*/}
+                            {/*</NavItem>*/}
                             <NavItem>
                                 <NavLink>
                                     <LogIn/>

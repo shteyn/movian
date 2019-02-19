@@ -59,9 +59,9 @@ class FilmModel extends Component {
         <div onClick={this.toggle} className="addMovieBtn">
           Add Movie
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="divModal">
           <ModalHeader toggle={this.toggle}>Add a New Movie</ModalHeader>
-          <ModalBody>
+          <ModalBody className="divModal">
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="film">Movie Name</Label>
