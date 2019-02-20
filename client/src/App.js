@@ -12,7 +12,6 @@ class App extends Component {
         <div className="App">
           <AppNavbar />
           <FilmsList />
-
         </div>
       </Provider>
     )

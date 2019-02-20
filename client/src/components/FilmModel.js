@@ -1,33 +1,33 @@
 import React, { Component } from "react";
 import {
-    Button,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    Input,
-    Label,
-    Form,
-    FormGroup
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Input,
+  Label,
+  Form,
+  FormGroup
 } from "reactstrap";
-import {connect} from "react-redux";
-import {addFilm} from "../actions/filmAction";
+import { connect } from "react-redux";
+import { addFilm } from "../actions/filmAction";
 
 class FilmModel extends Component {
-    state = {
-        modal: false,
-        name: "",
-        year: "",
-        description: "",
-        actor: "",
-        image: ""
-    };
+  state = {
+    modal: false,
+    name: "",
+    year: "",
+    description: "",
+    actor: "",
+    image: ""
+  };
 
-    //set modal to what ever this not
-    toggle = () => {
-        this.setState({
-            modal: !this.state.modal
-        });
-    };
+  //set modal to what ever this not
+  toggle = () => {
+    this.setState({
+      modal: !this.state.modal
+    });
+  };
 
   handleInputChange = event => {
     console.log(event.target.value);
@@ -48,7 +48,6 @@ class FilmModel extends Component {
     };
     //add film via addFilm action
     this.props.addFilm(newFilm);
-    console.log("New film", newFilm);
 
     //Close the modal
     this.toggle();
@@ -123,9 +122,9 @@ class FilmModel extends Component {
 }
 
 const mapStateToProps = state => ({
-    film: state.film
+  film: state.film
 });
 export default connect(
-    mapStateToProps,
-    {addFilm}
+  mapStateToProps,
+  { addFilm }
 )(FilmModel);

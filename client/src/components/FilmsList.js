@@ -20,7 +20,6 @@ class FilmsList extends Component {
   //sends id to filmAction.js
   deleteFilmBtn = id => {
     this.props.deleteFilm(id);
-    console.log("ID from delete BTN fom FilmsList.js", id);
   };
 
   /*****UPDATE FILM****
@@ -31,6 +30,7 @@ class FilmsList extends Component {
 
   render() {
     const { films } = this.props.film;
+    console.log('from FILMLIST', films)
     return (
       <Container className="divContainer">
         <TransitionGroup className="films-list">
