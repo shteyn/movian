@@ -12,7 +12,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  FormGroup,
+  Label,
+  Input
 } from "reactstrap";
 
 export default class Example extends Component {
@@ -27,35 +30,24 @@ export default class Example extends Component {
 
   render() {
     return (
-      <Container className="mb-5">
-        <Navbar color="light" light expand="md" className="mb-5">
+      <Container className="AppNavbarContainer">
+        <Navbar color="dark" dark expand="md" className="mb-5">
           <NavbarBrand href="/">Movian</NavbarBrand>
+          <FormGroup>
+            <Label for="search" />
+            <Input type="text" name="text" id="search" placeholder="Search..." />
+          </FormGroup>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-
               <NavItem>
                 <NavLink>
                   <FilmModal />
                 </NavLink>
               </NavItem>
-
-              <NavItem>
-                <NavLink href="api/actors/">Actors</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="api/genre/">Genre</NavLink>
-              </NavItem>
-
               <NavItem>
                 <NavLink>
                   <LogIn />
-                </NavLink>
-              </NavItem>
-
-              <NavItem>
-                <NavLink>
-                  <SignUp />
                 </NavLink>
               </NavItem>
             </Nav>

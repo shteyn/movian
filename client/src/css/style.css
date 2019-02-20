@@ -1,0 +1,129 @@
+.divContainer {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .divContainer .films-list {
+    display: flex;
+    flex-wrap: wrap; }
+  .divContainer .imgDiv img {
+    height: 190px;
+    width: 160px; }
+  .divContainer .md-5 {
+    background: black; }
+  .divContainer .mt-4 {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .divContainer .ButtonContainer {
+    display: inline-block; }
+    .divContainer .ButtonContainer button {
+      width: 70px;
+      padding: 4px;
+      line-height: 0.6; }
+
+.AppNavbarContainer {
+  width: 100%;
+  max-width: none;
+  padding: 0; }
+  .AppNavbarContainer a {
+    color: red;
+    text-decoration: none; }
+
+.addMovieBtn {
+  cursor: pointer; }
+
+.modal-dialog {
+  margin-top: 10%; }
+
+.divContainer {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .divContainer .films-list {
+    display: flex;
+    flex-wrap: wrap; }
+  .divContainer .imgDiv img {
+    height: 190px;
+    width: 160px; }
+  .divContainer .md-5 {
+    background: #343a40; }
+  .divContainer .mt-4 {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .divContainer .ButtonContainer {
+    display: inline-block; }
+    .divContainer .ButtonContainer button {
+      width: 70px;
+      padding: 4px;
+      line-height: 0.6; }
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px; }
+  .pagination li {
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 5px 10px; }
+    .pagination li:hover {
+      background: #343a40; }
+      .pagination li:hover a {
+        color: white; }
+  .pagination .active {
+    background: #343a40;
+    color: white; }
+  .pagination a {
+    cursor: pointer; }
+
+.fade-enter {
+  opacity: 0.01; }
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in; }
+
+.fade-exit {
+  opacity: 1; }
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in; }
+
+body {
+  background: white;
+  background-size: cover; }
+
+  #movie {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 45rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+  #movie img {
+    width: 100%;
+  }

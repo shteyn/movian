@@ -63,7 +63,7 @@ class UpdateMovieModal extends Component {
     return (
       <div>
         <div onClick={this.toggle} className="addMovieBtn">
-          Update Movie
+          Update
         </div>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
 
