@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilmModal from "./FilmModel";
 import LogIn from "./LogIn";
-import SignUp from "./SignUp";
+// import SignUp from "./SignUp";
 
 import {
     Container,
@@ -10,6 +10,7 @@ import {
     Navbar,
     NavbarToggler,
     NavbarBrand,
+    Input,
     Nav,
     NavItem,
     NavLink
@@ -30,6 +31,7 @@ export default class Example extends Component {
             <Container className="AppNavbarContainer">
                 <Navbar color="dark" dark expand="md" className="md-5">
                     <NavbarBrand href="/" style={{color: "whitesmoke"}}>Movian</NavbarBrand>
+                    <NavbarBrand><Input placeholder={"Search..."}/></NavbarBrand>
                     {/*<NavbarBrand href="/film-list-test" style={{color: "whitesmoke"}}>FilmsListTest</NavbarBrand>*/}
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
@@ -51,11 +53,11 @@ export default class Example extends Component {
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem>
-                                <NavLink>
-                                    <SignUp/>
-                                </NavLink>
-                            </NavItem>
+                            {/*<NavItem>*/}
+                                {/*<NavLink>*/}
+                                    {/*<SignUp/>*/}
+                                {/*</NavLink>*/}
+                            {/*</NavItem>*/}
                         </Nav>
                 </Collapse>
             </Navbar>

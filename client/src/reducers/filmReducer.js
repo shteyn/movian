@@ -23,12 +23,25 @@ export default function (state = initialState, action) {
         loading: false
       };
     case UPDATE_FILM:
-      console.log('REDUCER: update film', action.payload)
+      let films = state.films;
+      let updatedFilms = films.map(item => {
+        if(item._id === action.payload._id){
+          return { ...item, ...action.payload }
+        }
+        return item;
+
+      });
       return {
         ...state,
-        films: [...state.films, action.payload],
+        films: updatedFilms,
         loading: false
       };
+
+      // return {
+      //   ...state,
+      //   films: [...state.films, action.payload],
+      //   loading: false
+      // };
     /*****DELETE FILM****
      **** THIRD STEP
      //1. filter() creates and returns a new array, without given id (!==id)

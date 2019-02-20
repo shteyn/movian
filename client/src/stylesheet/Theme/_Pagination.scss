@@ -1,0 +1,28 @@
+.pagination {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 2px;
+
+  button {
+    padding: 5px 10px;
+    margin: 3px;
+    //&:hover {
+    //  //background: #343a40;
+    //  color: white;
+    //  button {
+    //    color: white;
+    //    background: rgba(0, 0, 0, 0);
+    //  }
+    //}
+  }
+  .active {
+    //background: #343a40;
+    color: white;
+  }
+  button {
+    cursor: pointer;
+  }
+}

@@ -24,20 +24,19 @@ class Pagination extends React.Component {
         if (this.props.films && this.props.films.length) {
             this.setPage(this.props.initialPage);
         }
-        console.log('props from films', this.props.films);
     }
 
     componentDidUpdate(prevProps, prevState) {
         // reset page if items array has changed
         if (this.props.films !== prevProps.films) {
             this.setPage(this.props.initialPage);
+
         }
     }
 
     setPage(page) {
         let { films, pageSize } = this.props;
         let pager = this.state.pager;
-
         if (page < 1 || page > pager.totalPages) {
             return;
         }
@@ -114,25 +113,25 @@ class Pagination extends React.Component {
         }
 
         return (
-            <ul className="pagination">
-                <li className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <a onClick={() => this.setPage(1)}>First</a>
-                </li>
-                <li className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <a onClick={() => this.setPage(pager.currentPage - 1)}>&larr; Previous</a>
-                </li>
+            <div className="pagination">
+                <div className={pager.currentPage === 1 ? 'disabled' : ''}>
+                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(1)}>First</button>
+                </div>
+                <div className={pager.currentPage === 1 ? 'disabled' : ''}>
+                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.currentPage - 1)}>&larr; Previous</button>
+                </div>
                 {pager.pages.map((page, index) =>
-                    <li key={index} className={pager.currentPage === page ? 'active' : ''}>
-                        <a onClick={() => this.setPage(page)}>{page}</a>
-                    </li>
+                    <div key={index} className={pager.currentPage === page ? 'active' : ''}>
+                        <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(page)}>{page}</button>
+                    </div>
                 )}
-                <li className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <a onClick={() => this.setPage(pager.currentPage + 1)}>Next &rarr;</a>
-                </li>
-                <li className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <a onClick={() => this.setPage(pager.totalPages)}>Last</a>
-                </li>
-            </ul>
+                <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
+                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.currentPage + 1)}>Next &rarr;</button>
+                </div>
+                <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
+                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.totalPages)}>Last</button>
+                </div>
+            </div>
         );
     }
 }

@@ -59,7 +59,7 @@ class FilmsListTest extends Component {
             <Container className="divContainer">
                 <TransitionGroup
                     className="films-list">
-                    {this.state.pageOfFilms.map((oneFilm) => {
+                    {films.map((oneFilm) => {
                         return (
                             <CSSTransition
                                 key={oneFilm._id}

@@ -2,28 +2,19 @@ import React, {Component} from "react";
 import {Container, /*ListGroup,*/ ListGroupItem, Button} from "reactstrap";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {connect} from "react-redux";
-import {getFilms, deleteFilm, getOneFilmData} from "../actions/filmAction";
-import PropTypes from "prop-types";
+import {getFilms, deleteFilm, getOneFilmData, updateFilm} from "../actions/filmAction";
+import propTypes from "prop-types";
 import UpdateMovieModal from './UpdateMovieModal';
 import Pagination from './Pagination';
-
-
-
 
 
 class FilmsListTest extends Component {
     constructor(props) {
         super(props);
-        const films = this.props.film;
-        let filmItems = [films.keys].map(film => ({
-            id: ( film + 1 ),
-            name: film
-        }));
-
         this.onChangePage = this.onChangePage.bind(this);
 
         this.state = {
-            filmItems: filmItems,
+            filmItems: [],
             pageOfFilms: []
         }
     }
@@ -32,10 +23,12 @@ class FilmsListTest extends Component {
         // update local state with new page of items
         this.setState({pageOfFilms});
     }
+
     componentDidMount() {
         this.props.getFilms();
         //runs getFilms() in filmActions.js
     }
+
 
     /*****DELETE FILM****
      **** FIRST STEP
@@ -53,13 +46,14 @@ class FilmsListTest extends Component {
 
 
     render() {
-        const {films} = this.props.film;
+        let {films} = this.props.film;
 
         return (
-            <Container className="divContainer">
-                <TransitionGroup
-                    className="films-list">
-                    {this.state.pageOfFilms.map((oneFilm) => {
+            <div>
+                <Container className="divContainer">
+                    <TransitionGroup
+                        className="films-list">
+                        {this.state.pageOfFilms.map((oneFilm) => {
                             return (
                                 <CSSTransition
                                     key={oneFilm._id}
@@ -89,31 +83,31 @@ class FilmsListTest extends Component {
                                 </CSSTransition>
                             )
                         })}
-                    <Pagination items={this.state.filmItems} onChangePage={this.onChangePage} films={films}/>
-                </TransitionGroup>
-            </Container>
+
+                    </TransitionGroup>
+                </Container>
+                <Pagination onChangePage={this.onChangePage} films={films}/>
+            </div>
         );
     }
-
 }
 
 
-FilmsListTest.PropTypes = {
-    getFilms: PropTypes.func.isRequired,
-    film: PropTypes.object.isRequired
+FilmsListTest.propTypes = {
+    getFilms: propTypes.func.isRequired,
+    film: propTypes.object.isRequired
 };
 
 
 //1. allows us to take the initialState from "filmReducer.js" and map it to component property, so we can use it in our component as "this.props.film"
 const mapStateToProps = state => ({
     //we are calling film, because we called it like that in our index.js in "/reducers/index.js"
-    film: state.film,
-    // page: Number(state.routing.locationBeforeTransition.query.page) || 1,
+    film: state.film
 });
 
 export default connect(
     mapStateToProps,
-    {getFilms, deleteFilm, getOneFilmData}
+    {getFilms, deleteFilm, getOneFilmData, updateFilm}
 )(FilmsListTest);
 //instead of exporting the actual class of the component,
 

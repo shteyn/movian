@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 //import { Link, NavLink, Router, Route } from 'react-router-dom';
-import SignUp from './SignUp'
+// import SignUp from './SignUp'
 
 
 import {
     Button,
     Modal,
-    ModalHeader,
+    // ModalHeader,
     ModalBody,
     Input,
     Label,

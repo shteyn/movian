@@ -43,19 +43,52 @@
       padding: 4px;
       line-height: 0.6; }
 
-.pagination {
+.divPagination {
   position: relative;
-  margin-bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
   column-gap: 2px; }
-  .pagination button {
-    padding: 5px 10px;
-    margin: 3px; }
-  .pagination .active {
+  .divPagination button {
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 5px 10px; }
+    .divPagination button:hover {
+      background: #343a40; }
+      .divPagination button:hover button {
+        color: white;
+        background: transparent; }
+  .divPagination .active {
+    background: #343a40;
     color: white; }
-  .pagination button {
+  .divPagination button {
+    cursor: pointer; }
+
+.pagination {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px; }
+  .pagination .pagination > button {
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 5px; }
+    .pagination .pagination > button:hover {
+      background: #343a40; }
+      .pagination .pagination > button:hover .pagination > button {
+        color: white;
+        background: transparent; }
+  .pagination .active {
+    background: #343a40;
+    color: white; }
+  .pagination .pagination > button {
     cursor: pointer; }
 
 .fade-enter {
@@ -73,7 +106,7 @@
   transition: opacity 1000ms ease-in; }
 
 body {
-  background: white;
+  background: red;
   background-size: cover; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=cssstyle.css.map */
