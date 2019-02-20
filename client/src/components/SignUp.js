@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
 
 
 import {
@@ -13,9 +12,6 @@ import {
   FormGroup
 } from "reactstrap";
 
-import { connect } from "react-redux";
-import { addFilm } from "../actions/filmAction";
-
 class SignUp extends Component {
   constructor() {
     super();
@@ -28,7 +24,7 @@ class SignUp extends Component {
     };
   }
 
-  toggle = e => {
+  toggle = () => {
     this.setState({
       modal: !this.state.modal
     });
@@ -42,7 +38,7 @@ class SignUp extends Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();

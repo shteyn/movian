@@ -1,0 +1,41 @@
+.divContainer {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .films-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imgDiv {
+    img {
+      height: 190px;
+      width: 160px;
+    }
+  }
+  .md-5 {
+    background: black;
+  }
+
+  .mt-4 {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    background-color: whitesmoke;
+    //border: 1px solid #383b43;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ButtonContainer {
+    display: inline-block;
+    button {
+      width: 70px;
+      padding: 4px;
+      line-height: 0.6;
+    }
+  }
+}

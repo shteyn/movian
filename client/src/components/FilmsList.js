@@ -66,21 +66,33 @@ class FilmsList extends Component {
       </Container>
     );
   }
+
 }
 
-FilmsList.propTypes = {
-  getFilms: propTypes.func.isRequired,
-  film: propTypes.object.isRequired
+
+FilmsListTest.PropTypes = {
+    getFilms: PropTypes.func.isRequired,
+    film: PropTypes.object.isRequired
 };
+
 
 //1. allows us to take the initialState from "filmReducer.js" and map it to component property, so we can use it in our component as "this.props.film"
 const mapStateToProps = state => ({
-  //we are calling film, because we called it like that in our index.js in "/reducers/index.js"
-  film: state.film
+    //we are calling film, because we called it like that in our index.js in "/reducers/index.js"
+    film: state.film,
+    // page: Number(state.routing.locationBeforeTransition.query.page) || 1,
 });
 
 export default connect(
-  mapStateToProps,
-  { getFilms, deleteFilm, getOneFilmData }
-)(FilmsList);
+    mapStateToProps,
+    {getFilms, deleteFilm, getOneFilmData}
+)(FilmsListTest);
 //instead of exporting the actual class of the component,
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+.divContainer {
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .films-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imgDiv {
+    img {
+      height: 190px;
+      width: 160px;
+    }
+  }
+  .md-5 {
+    background: #343a40;
+  }
+
+  .mt-4 {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    background-color: whitesmoke;
+    //border: 1px solid #383b43;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ButtonContainer {
+    display: inline-block;
+    button {
+      width: 70px;
+      padding: 4px;
+      line-height: 0.6;
+    }
+  }
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  column-gap: 2px;
+  li {
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    padding: 5px 10px;
+    &:hover {
+      background: #343a40;
+      a {
+        color: white;
+      }
+    }
+  }
+  .active {
+    background: #343a40;
+    color: white;
+  }
+  a {
+    cursor: pointer;
+  }
+}

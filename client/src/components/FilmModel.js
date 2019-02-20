@@ -1,36 +1,36 @@
 import React, { Component } from "react";
-
 import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Input,
-  Label,
-  Form,
-  FormGroup
+    Button,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    Input,
+    Label,
+    Form,
+    FormGroup
 } from "reactstrap";
-import { connect } from "react-redux";
-import { addFilm } from "../actions/filmAction";
+import {connect} from "react-redux";
+import {addFilm} from "../actions/filmAction";
 
 class FilmModel extends Component {
-  state = {
-    modal: false,
-    name: "",
-    year: "",
-    description: "",
-    actor: "",
-    image: ""
-  };
+    state = {
+        modal: false,
+        name: "",
+        year: "",
+        description: "",
+        actor: "",
+        image: ""
+    };
 
-  //set modal to what ever this not
-  toggle = () => {
-    this.setState({
-      modal: !this.state.modal
-    });
-  };
+    //set modal to what ever this not
+    toggle = () => {
+        this.setState({
+            modal: !this.state.modal
+        });
+    };
 
   handleInputChange = event => {
+    console.log(event.target.value);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -38,6 +38,7 @@ class FilmModel extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
     const newFilm = {
       name: this.state.name,
       year: this.state.year,
@@ -47,20 +48,20 @@ class FilmModel extends Component {
     };
     //add film via addFilm action
     this.props.addFilm(newFilm);
+    console.log("New film", newFilm);
 
     //Close the modal
     this.toggle();
   };
-
   render() {
     return (
       <div>
         <div onClick={this.toggle} className="addMovieBtn">
           Add Movie
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="divModal">
           <ModalHeader toggle={this.toggle}>Add a New Movie</ModalHeader>
-          <ModalBody>
+          <ModalBody className="divModal">
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label for="film">Movie Name</Label>
@@ -122,9 +123,9 @@ class FilmModel extends Component {
 }
 
 const mapStateToProps = state => ({
-  film: state.film
+    film: state.film
 });
 export default connect(
-  mapStateToProps,
-  { addFilm }
+    mapStateToProps,
+    {addFilm}
 )(FilmModel);

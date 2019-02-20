@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilmModal from "./FilmModel";
 import LogIn from "./LogIn";
@@ -19,14 +19,14 @@ import {
 } from "reactstrap";
 
 export default class Example extends Component {
-  state = {
-    isOpen: false
-  };
-  toggle = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
+    state = {
+        isOpen: false
+    };
+    toggle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    };
 
   render() {
     return (
@@ -57,3 +57,4 @@ export default class Example extends Component {
     );
   }
 }
+
