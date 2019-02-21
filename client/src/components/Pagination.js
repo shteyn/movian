@@ -10,7 +10,7 @@ const propTypes = {
 
 const defaultProps = {
     initialPage: 1,
-    pageSize: 14
+    pageSize: 16
 };
 
 class Pagination extends React.Component {
@@ -59,7 +59,7 @@ class Pagination extends React.Component {
         currentPage = currentPage || 1;
 
         // default page size is 10
-        pageSize = pageSize || 14;
+        pageSize = pageSize || 16;
 
         // calculate total pages
         let totalPages = Math.ceil(totalFilms / pageSize);
@@ -115,21 +115,21 @@ class Pagination extends React.Component {
         return (
             <div className="pagination">
                 <div className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(1)}>First</button>
+                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(1)}><span className="ui-border-element">First</span></button>
                 </div>
                 <div className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.currentPage - 1)}>&larr; Previous</button>
+                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.currentPage - 1)}><span className="ui-border-element">&larr; Previous</span></button>
                 </div>
                 {pager.pages.map((page, index) =>
                     <div key={index} className={pager.currentPage === page ? 'active' : ''}>
-                        <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(page)}>{page}</button>
+                        <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(page)}><span className="ui-border-element">{page}</span></button>
                     </div>
                 )}
                 <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.currentPage + 1)}>Next &rarr;</button>
+                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.currentPage + 1)}><span className="ui-border-element">Next &rarr;</span></button>
                 </div>
                 <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <button className="ui-box bottom-inOutSpread" onClick={() => this.setPage(pager.totalPages)}>Last</button>
+                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.totalPages)}><span className="ui-border-element">Last</span></button>
                 </div>
             </div>
         );

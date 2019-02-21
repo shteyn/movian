@@ -1,11 +1,14 @@
 import React, {Component} from "react";
-import {Container, /*ListGroup,*/ ListGroupItem, Button} from "reactstrap";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {Container, /*ListGroup,*/ ListGroupItem, /*Button*/} from "reactstrap";
+// import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {connect} from "react-redux";
 import {getFilms, deleteFilm, getOneFilmData, updateFilm} from "../actions/filmAction";
 import propTypes from "prop-types";
-import UpdateMovieModal from './UpdateMovieModal';
+// import UpdateMovieModal from './UpdateMovieModal';
+import FilmDivModel from './FilmDivModel';
 import Pagination from './Pagination';
+
+// import divWithClassName from "react-bootstrap/es/utils/divWithClassName";
 
 
 class FilmsListTest extends Component {
@@ -15,7 +18,8 @@ class FilmsListTest extends Component {
 
         this.state = {
             filmItems: [],
-            pageOfFilms: []
+            pageOfFilms: [],
+            showDisplay: false
         }
     }
 
@@ -28,6 +32,20 @@ class FilmsListTest extends Component {
         this.props.getFilms();
         //runs getFilms() in filmActions.js
     }
+
+    showDisplayHandler = (oneFilm) => {
+        this.setState({
+            oneFilm: oneFilm,
+            showDisplay: true
+        })
+    };
+
+    hideDisplayHandler = () => {
+        this.setState({
+            showDisplay: false
+        })
+    };
+
 
 
     /*****DELETE FILM****
@@ -43,48 +61,53 @@ class FilmsListTest extends Component {
      **** FIRST STEP
      ********************/
     //sends id to filmAction.js
-
+    // renderShowDisplay = () => {
+    //     console.log('ayxgj');
+    //     return (
+    //         <FilmDivModel />
+    //     )
+    // };
 
     render() {
         let {films} = this.props.film;
 
         return (
             <div>
+                <FilmDivModel show={this.state.showDisplay} film={this.state.oneFilm} hide={this.hideDisplayHandler}/>
                 <Container className="divContainer">
-                    <TransitionGroup
+                    <div
                         className="films-list">
                         {this.state.pageOfFilms.map((oneFilm) => {
                             return (
-                                <CSSTransition
-                                    key={oneFilm._id}
-                                    timeout={500}
-                                    classNames="fade">
+                                <div
+                                    key={oneFilm._id}>
                                     <ListGroupItem className="mt-4">
-                                        <div className="imgDiv">
+                                        <div className="imgDiv" onClick={() => {this.showDisplayHandler(oneFilm)}} >
                                             <img src={oneFilm.image} alt=""/>
                                         </div>
-                                        <div><span>Name: </span>{oneFilm.name}</div>
-                                        <div>{oneFilm.year}</div>
-                                        <div>{oneFilm.description}</div>
-                                        <div>{oneFilm.actor}</div>
+                                        {/*<div><span>Name: </span>{oneFilm.name}</div>*/}
+                                        {/*<div>{oneFilm.year}</div>*/}
+                                        {/*<div>{oneFilm.description}</div>*/}
+                                        {/*<div>{oneFilm.actor}</div>*/}
 
-                                        <div className="ButtonContainer">
-                                            <Button
-                                                className="remove-btn mr-3 btn-danger"
-                                                onClick={this.deleteFilmBtn.bind(this, oneFilm._id)}
-                                            >
-                                                remove
-                                            </Button>
-                                            <Button>
-                                                <UpdateMovieModal listFilm={oneFilm}/>
-                                            </Button>
-                                        </div>
+                                        {/*<div className="ButtonContainer">*/}
+                                            {/*<Button*/}
+                                                {/*className="remove-btn mr-3 btn-danger"*/}
+                                                {/*onClick={this.deleteFilmBtn.bind(this, oneFilm._id)}*/}
+                                            {/*>*/}
+                                                {/*remove*/}
+                                            {/*</Button>*/}
+                                            {/*<Button>*/}
+                                                {/*<UpdateMovieModal listFilm={oneFilm}/>*/}
+                                            {/*</Button>*/}
+                                        {/*</div>*/}
                                     </ListGroupItem>
-                                </CSSTransition>
+                                </div>
                             )
                         })}
 
-                    </TransitionGroup>
+
+                    </div>
                 </Container>
                 <Pagination onChangePage={this.onChangePage} films={films}/>
             </div>

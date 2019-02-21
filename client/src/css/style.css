@@ -14,7 +14,7 @@
 
 .divContainer {
   max-width: 1500px;
-  margin: auto;
+  margin: 100px auto;
   display: flex;
   flex-wrap: wrap; }
   .divContainer .films-list {
@@ -26,10 +26,11 @@
   .divContainer .md-5 {
     background: #343a40; }
   .divContainer .mt-4 {
-    width: 180px;
+    width: 160px;
     height: auto;
-    padding: 10px;
     margin: 10px;
+    padding: 0;
+    box-shadow: 8px 10px 10px #343a40;
     position: relative;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -45,14 +46,15 @@
 
 .pagination {
   position: relative;
-  margin-bottom: 10px;
+  margin: 20px;
   padding: 0;
   display: flex;
   justify-content: center;
   column-gap: 2px; }
   .pagination button {
     padding: 5px 10px;
-    margin: 3px; }
+    margin: 3px;
+    box-shadow: 3px 3px 10px #343a40; }
   .pagination .active {
     color: white; }
   .pagination button {
