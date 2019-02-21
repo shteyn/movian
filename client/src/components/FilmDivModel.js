@@ -18,10 +18,6 @@ import {getFilms} from "../actions/filmAction";
 // updateFilm fnc will target film with id passing updated object
 
 class FilmDivModel extends Component {
-    constructor(props){
-        super(props);
-
-    }
 
     //set modal to what ever this not
     toggle = () => {
@@ -37,7 +33,6 @@ class FilmDivModel extends Component {
             film = {name: ''}
         }
 
-        console.log(this.props.film);
         return (
             <Modal isOpen={this.props.show} toggle={this.toggle}>
 
