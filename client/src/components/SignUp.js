@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import {
   Button,
   Modal,
-  ModalHeader,
+  // ModalHeader,
   ModalBody,
   Input,
   Label,
@@ -83,7 +83,7 @@ class SignUp extends Component {
               <div className="FormField">
                 <label className="FormField__CheckboxLabel">
                   <input className="FormField__Checkbox" type="checkbox" name="hasAgreed"
-                    value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in <a href="" className="route">terms of service</a>
+                    value={this.state.hasAgreed} onChange={this.handleChange} /> I agree all statements in {/* <a href="" className="route"> */}terms of service{/* </a> */}
                 </label>
               </div>
 
