@@ -6,12 +6,27 @@ import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+        query: ''
+    };
+
+};
+
+  searchChanged = (query) => {
+    this.setState({query: query})
+    
+  }
+
   render() {
     return (
       <Provider store={store}>
         <div className="App">
-          <AppNavbar />
-          <FilmsList />
+          <AppNavbar searchChanged = {this.searchChanged}/>
+          <FilmsList query={this.state.query}/>
         </div>
       </Provider>
     )

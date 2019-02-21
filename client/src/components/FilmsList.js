@@ -30,11 +30,18 @@ class FilmsList extends Component {
 
   render() {
     const { films } = this.props.film;
-    console.log('from FILMLIST', films)
+
+    const filteredMovies = films.filter(
+      (film) => {
+        return film.name.toLowerCase().indexOf (this.props.query) !== -1;
+      }
+    );
+    
+
     return (
       <Container className="divContainer">
         <TransitionGroup className="films-list">
-          {films.map((oneFilm) => (
+          {filteredMovies.map((oneFilm) => (
             <CSSTransition key={oneFilm._id} timeout={500} classNames="fade">
               <ListGroupItem className="mt-4">
                 <div className="imgDiv">
