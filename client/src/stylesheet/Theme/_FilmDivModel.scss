@@ -1,0 +1,43 @@
+.modal-dialog {
+  max-width: 900px;
+  width: 100%;
+}
+
+.parentContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.modal-content {
+  border-radius: 15px;
+  .secondDivModal {
+    display: flex;
+    .contentDiv {
+      margin: 0 20px;
+      width: 100%;
+    }
+    .modal-header {
+
+    }
+    .imgDiv {
+      margin-top: -50px;
+      margin-left: -50px;
+      img {
+        width: 300px;
+        height: 420px;
+      }
+    }
+  }
+
+  .VideoContainer {
+    width: 100%;
+  }
+  .react-player {
+    width: 860px;
+  }
+}
+
+

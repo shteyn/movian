@@ -1,14 +1,12 @@
 import React, {Component} from "react";
-import {Container, /*ListGroup,*/ ListGroupItem, /*Button*/} from "reactstrap";
+import {Container, /*ListGroup,*/ ListGroupItem, Button} from "reactstrap";
 // import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {connect} from "react-redux";
 import {getFilms, deleteFilm, getOneFilmData, updateFilm} from "../actions/filmAction";
 import propTypes from "prop-types";
-// import UpdateMovieModal from './UpdateMovieModal';
+import UpdateMovieModal from './UpdateMovieModal';
 import FilmDivModel from './FilmDivModel';
 import Pagination from './Pagination';
-
-// import divWithClassName from "react-bootstrap/es/utils/divWithClassName";
 
 
 class FilmsListTest extends Component {
@@ -47,7 +45,6 @@ class FilmsListTest extends Component {
     };
 
 
-
     /*****DELETE FILM****
      **** FIRST STEP
      ********************/
@@ -61,19 +58,17 @@ class FilmsListTest extends Component {
      **** FIRST STEP
      ********************/
     //sends id to filmAction.js
-    // renderShowDisplay = () => {
-    //     console.log('ayxgj');
-    //     return (
-    //         <FilmDivModel />
-    //     )
-    // };
 
     render() {
         let {films} = this.props.film;
 
         return (
             <div>
-                <FilmDivModel show={this.state.showDisplay} film={this.state.oneFilm} hide={this.hideDisplayHandler}/>
+                <FilmDivModel
+                    show={this.state.showDisplay}
+                    film={this.state.oneFilm}
+                    hide={this.hideDisplayHandler}
+                />
                 <Container className="divContainer">
                     <div
                         className="films-list">
@@ -82,7 +77,9 @@ class FilmsListTest extends Component {
                                 <div
                                     key={oneFilm._id}>
                                     <ListGroupItem className="mt-4">
-                                        <div className="imgDiv" onClick={() => {this.showDisplayHandler(oneFilm)}} >
+                                        <div className="imgDiv" onClick={() => {
+                                            this.showDisplayHandler(oneFilm)
+                                        }}>
                                             <img src={oneFilm.image} alt=""/>
                                         </div>
                                         {/*<div><span>Name: </span>{oneFilm.name}</div>*/}
@@ -90,17 +87,17 @@ class FilmsListTest extends Component {
                                         {/*<div>{oneFilm.description}</div>*/}
                                         {/*<div>{oneFilm.actor}</div>*/}
 
-                                        {/*<div className="ButtonContainer">*/}
-                                            {/*<Button*/}
-                                                {/*className="remove-btn mr-3 btn-danger"*/}
-                                                {/*onClick={this.deleteFilmBtn.bind(this, oneFilm._id)}*/}
-                                            {/*>*/}
-                                                {/*remove*/}
-                                            {/*</Button>*/}
-                                            {/*<Button>*/}
-                                                {/*<UpdateMovieModal listFilm={oneFilm}/>*/}
-                                            {/*</Button>*/}
-                                        {/*</div>*/}
+                                        <div className="ButtonContainer">
+                                            <Button
+                                                className="remove-btn mr-3 btn-danger"
+                                                onClick={this.deleteFilmBtn.bind(this, oneFilm._id)}
+                                            >
+                                                remove
+                                            </Button>
+                                            <Button>
+                                                <UpdateMovieModal listFilm={oneFilm}/>
+                                            </Button>
+                                        </div>
                                     </ListGroupItem>
                                 </div>
                             )

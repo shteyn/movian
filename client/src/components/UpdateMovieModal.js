@@ -26,7 +26,8 @@ class UpdateMovieModal extends Component {
     year: this.props.listFilm.year,
     description: this.props.listFilm.description,
     actor: this.props.listFilm.actor,
-    image: this.props.listFilm.image
+    image: this.props.listFilm.image,
+    video: this.props.listFilm.video
   };
 
   //set modal to what ever this not
@@ -51,7 +52,8 @@ class UpdateMovieModal extends Component {
       year: this.state.year,
       description: this.state.description,
       actor: this.state.actor,
-      image: this.state.image
+      image: this.state.image,
+      video: this.state.video
     };
     //update film via updateFilm action
     this.props.updateFilm(updatedFilmObject);
@@ -106,9 +108,17 @@ class UpdateMovieModal extends Component {
                   type="url"
                   name="image"
                   value={this.state.image} onChange={this.handleChange}
-
                 />
               </FormGroup>
+              <FormGroup>
+                <Label for="video">Insert video URL</Label>
+                <Input
+                    type="url"
+                    name="video"
+                    value={this.state.video} onChange={this.handleChange}
+                />
+              </FormGroup>
+
               <Button>Update</Button>
             </Form>
           </ModalBody>

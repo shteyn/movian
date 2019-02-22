@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {
+    Button,
     Modal,
     ModalHeader,
     ModalBody,
@@ -8,52 +9,88 @@ import {
     // Form,
     FormGroup, /*Input*/
 } from "reactstrap";
+import ReactPlayer from 'react-player'
 import {connect} from "react-redux";
 import {getFilms} from "../actions/filmAction";
+import ReactPlayerComponent from './ReactPlayerComponent'
 //import { getOneFilmData } from "../actions/filmAction";
 // import PropTypes from "prop-types";
 
-//Create  getoneid fnc in film action to get and id
+//Create  getOneId fnc in film action to get and id
 // click btn will give an id like in films and then I will send with updateFilm fnc data back
 // updateFilm fnc will target film with id passing updated object
 
 class FilmDivModel extends Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            showPlayer: false
+        }
+    }
     //set modal to what ever this not
     toggle = () => {
         this.props.hide()
     };
 
+    // show = () => {
+    //     this.props.show()
+    // };
+    // showPlayerHandler = (video) => {
+    //     this.setState({
+    //         video: video,
+    //         showPlayer: true
+    //     })
+    // };
+    //
+    // hidePlayerHandler = () => {
+    //     this.setState({
+    //         showPlayer: false
+    //     })
+    // };
 
 
     render() {
         let film = this.props.film;
 
         if(film === undefined) {
-            film = {name: ''}
+            film = {
+                name: '',
+                image: '',
+                actor: '',
+                description: '',
+                year: '',
+                video: '',
+                url: ''
+            }
         }
 
         return (
             <Modal isOpen={this.props.show} toggle={this.toggle}>
-
-                <ModalHeader toggle={this.toggle}>{film.name}</ModalHeader>
                 <ModalBody>
+                        <div className="parentContentContainer">
+                            <div className="secondDivModal">
+                                <div className="imgDiv">
+                                    <FormGroup>
+                                        <img src={film.image} alt=""/>
+                                    </FormGroup>
+                                </div>
+                                <div className="contentDiv">
+                                    <ModalHeader toggle={this.toggle}>{film.name}</ModalHeader>
+                                    <FormGroup>
+                                        <Label for="Year">Year: {film.year}</Label>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Label for="description">Description: {film.description}</Label>
 
-                        <FormGroup>
-                            <Label for="Year">Year:</Label>
-                            <p>{film.year}</p>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="description">Description: </Label>
-                            <p>{film.description}</p>
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="actor">Actor:</Label>
-                            <p>{film.actor}</p>
-                        </FormGroup>
-                        <FormGroup>
-                            <img src={film.image} alt=""/>
-                        </FormGroup>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Label for="actor">Actor: {film.actor}</Label>
+                                    </FormGroup>
+                                    <Button onClick={this.showPlayerHandler}>Watch Trailer</Button>
+                                </div>
+                            </div>
+                            <ReactPlayer url={film.video} className='react-player' width='100%' height='520px'/>
+                        </div>
                 </ModalBody>
             </Modal>
         );

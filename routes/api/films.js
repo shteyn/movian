@@ -29,7 +29,8 @@ router.post("/", (req, res) => {
     year: req.body.year,
     description: req.body.description,
     actor: req.body.actor,
-    image: req.body.image
+    image: req.body.image,
+    video: req.body.video
   });
   console.log("comes from req.body.name", req.body.name);
   newFilm.save().then(film => res.json(film));

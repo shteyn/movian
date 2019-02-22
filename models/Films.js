@@ -23,6 +23,10 @@ const FilmsSchema = new Schema({
     type: String,
     required: true
   },
+  video: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now
