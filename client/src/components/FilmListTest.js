@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import {Container, /*ListGroup,*/ ListGroupItem, Button} from "reactstrap";
-// import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {Container, ListGroupItem, Button} from "reactstrap";
 import {connect} from "react-redux";
 import {getFilms, deleteFilm, getOneFilmData, updateFilm} from "../actions/filmAction";
 import propTypes from "prop-types";
@@ -17,7 +16,8 @@ class FilmsListTest extends Component {
         this.state = {
             filmItems: [],
             pageOfFilms: [],
-            showDisplay: false
+            showDisplay: false,
+            showUpdateDisplay: false
         }
     }
 
@@ -44,6 +44,19 @@ class FilmsListTest extends Component {
         })
     };
 
+    showUpdateDisplayHandler = (oneFilm) => {
+        this.setState({
+            oneFilm: oneFilm,
+            showUpdateDisplay: true
+        })
+    };
+
+    hideUpdateDisplayHandler = () => {
+        this.setState({
+            showUpdateDisplay: false
+        })
+    };
+
 
     /*****DELETE FILM****
      **** FIRST STEP
@@ -61,7 +74,6 @@ class FilmsListTest extends Component {
 
     render() {
         let {films} = this.props.film;
-
         return (
             <div>
                 <FilmDivModel
@@ -82,11 +94,6 @@ class FilmsListTest extends Component {
                                         }}>
                                             <img src={oneFilm.image} alt=""/>
                                         </div>
-                                        {/*<div><span>Name: </span>{oneFilm.name}</div>*/}
-                                        {/*<div>{oneFilm.year}</div>*/}
-                                        {/*<div>{oneFilm.description}</div>*/}
-                                        {/*<div>{oneFilm.actor}</div>*/}
-
                                         <div className="ButtonContainer">
                                             <Button
                                                 className="remove-btn mr-3 btn-danger"
@@ -94,16 +101,20 @@ class FilmsListTest extends Component {
                                             >
                                                 remove
                                             </Button>
-                                            <Button>
-                                                <UpdateMovieModal listFilm={oneFilm}/>
+                                            <Button onClick={() => {
+                                                this.showUpdateDisplayHandler(oneFilm)
+                                            }}>
+                                                <UpdateMovieModal
+                                                    listFilm={oneFilm}
+                                                    showUpdateModal={this.state.showUpdateDisplay}
+                                                    film={this.state.oneFilm}
+                                                    hideUpdateModal={this.hideUpdateDisplayHandler}/>
                                             </Button>
                                         </div>
                                     </ListGroupItem>
                                 </div>
                             )
                         })}
-
-
                     </div>
                 </Container>
                 <Pagination onChangePage={this.onChangePage} films={films}/>

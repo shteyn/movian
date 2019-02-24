@@ -41,3 +41,21 @@
 }
 
 
+.reactPlayerCont {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  .react-player {
+    max-width: 1200px;
+    max-height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+

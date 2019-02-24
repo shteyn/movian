@@ -36,7 +36,9 @@ class UpdateMovieModal extends Component {
       modal: !this.state.modal
     });
   };
-
+  toggleUpdateHandler = () => {
+    this.props.hideUpdateModal()
+  };
 
   handleChange = event => {
         this.setState({
@@ -68,9 +70,9 @@ class UpdateMovieModal extends Component {
         <div onClick={this.toggle} className="addMovieBtn">
           Update
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+        <Modal isOpen={this.props.showUpdateModal} toggle={this.toggleUpdateHandler} className="ModalWindow">
 
-          <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>
+          <ModalHeader toggle={this.toggleUpdateHandler}>Update this Movie</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
@@ -119,7 +121,7 @@ class UpdateMovieModal extends Component {
                 />
               </FormGroup>
 
-              <Button>Update</Button>
+              <Button onClick={this.handleSubmit}>Update</Button>
             </Form>
           </ModalBody>
         </Modal>
