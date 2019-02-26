@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a8367b-d397-44fa-a3bf-dc18d4d68e54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_UpdateMovieModal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/FilmListTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmListTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ReactPlayerComponent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/UpdateMovieModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UpdateMovieModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,88 +19,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.34548944">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-405">
-                  <caret line="33" column="6" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="33" selection-end-column="6" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_App.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="721">
-                  <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/components/UpdateMovieModal.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="163">
-                  <caret line="123" column="48" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_UpdateMovieModal.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="38" column="14" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="129" column="2" lean-forward="true" selection-start-line="129" selection-start-column="2" selection-end-line="129" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/UpdateMovieModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="69" column="16" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -170,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +147,20 @@
               <item name="movian" type="b2602c69:ProjectViewProjectNode" />
               <item name="movian" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movian" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movian" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movian" type="b2602c69:ProjectViewProjectNode" />
@@ -228,10 +201,16 @@
               <item name="movian" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="movian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movian" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,12 +274,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113212000" />
+    <option name="totallyTimeSpent" value="113244000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="0" y="-2" width="1366" height="715" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17606747" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24869695" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -312,8 +292,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.45330536" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.42917103" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.45330536" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.38737202" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -327,7 +307,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Was something modified!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Was something modified!" />
+    <MESSAGE value="working on layout for film cards!" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on layout for film cards!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/components/UI/CardComponent.js" />
@@ -531,20 +512,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/ReactPlayerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ReactPlayerComponent.js" />
     <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="369">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -596,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        <state relative-caret-position="100">
+          <caret line="129" column="2" lean-forward="true" selection-start-line="129" selection-start-column="2" selection-end-line="129" selection-end-column="2" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -606,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="135">
+          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -616,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/UpdateMovieModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="123" column="48" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
+        <state relative-caret-position="173">
+          <caret line="69" column="16" lean-forward="true" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

@@ -36,15 +36,13 @@ class UpdateMovieModal extends Component {
       modal: !this.state.modal
     });
   };
-  toggleUpdateHandler = () => {
-    this.props.hideUpdateModal()
-  };
+
 
   handleChange = event => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    };
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -66,66 +64,66 @@ class UpdateMovieModal extends Component {
 
   render() {
     return (
-      <div>
-        <div onClick={this.toggle} className="addMovieBtn">
-          Update
+        <div>
+          <div onClick={this.toggle} className="addMovieBtn">
+            Update
+          </div>
+          <Modal isOpen={this.state.modal} toggle={this.toggle}>
+
+            <ModalHeader toggle={this.toggle}>Update this Movie</ModalHeader>
+            <ModalBody>
+              <Form onSubmit={this.handleSubmit}>
+                <FormGroup>
+                  <Label for="film">Movie Name</Label>
+                  <Input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="Year">Year</Label>
+                  <Input
+                      type="text"
+                      name="year"
+                      value={this.state.year} onChange={this.handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="description">Description</Label>
+                  <Input
+                      type="text"
+                      name="description"
+                      value={this.state.description} onChange={this.handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="actor">Actor</Label>
+                  <Input
+                      type="text"
+                      name="actor"
+                      value={this.state.actor} onChange={this.handleChange}
+
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="image">Insert image URL</Label>
+                  <Input
+                      type="url"
+                      name="image"
+                      value={this.state.image} onChange={this.handleChange}
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="video">Insert video URL</Label>
+                  <Input
+                      type="url"
+                      name="video"
+                      value={this.state.video} onChange={this.handleChange}
+                  />
+                </FormGroup>
+
+                <Button>Update</Button>
+              </Form>
+            </ModalBody>
+          </Modal>
         </div>
-        <Modal isOpen={this.props.showUpdateModal} toggle={this.toggleUpdateHandler} className="ModalWindow">
-
-          <ModalHeader toggle={this.toggleUpdateHandler}>Update this Movie</ModalHeader>
-          <ModalBody>
-            <Form onSubmit={this.handleSubmit}>
-              <FormGroup>
-                <Label for="film">Movie Name</Label>
-                <Input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-              </FormGroup>
-              <FormGroup>
-                <Label for="Year">Year</Label>
-                <Input
-                  type="text"
-                  name="year"
-                  value={this.state.year} onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="description">Description</Label>
-                <Input
-                  type="text"
-                  name="description"
-                  value={this.state.description} onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="actor">Actor</Label>
-                <Input
-                  type="text"
-                  name="actor"
-                  value={this.state.actor} onChange={this.handleChange}
-
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="image">Insert image URL</Label>
-                <Input
-                  type="url"
-                  name="image"
-                  value={this.state.image} onChange={this.handleChange}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="video">Insert video URL</Label>
-                <Input
-                    type="url"
-                    name="video"
-                    value={this.state.video} onChange={this.handleChange}
-                />
-              </FormGroup>
-
-              <Button onClick={this.handleSubmit}>Update</Button>
-            </Form>
-          </ModalBody>
-        </Modal>
-      </div>
     );
   }
 }
@@ -134,10 +132,10 @@ const mapStateToProps = state => ({
   film: state.film
 });
 export default connect(
-  mapStateToProps,
-  { updateFilm }
+    mapStateToProps,
+    { updateFilm }
 )(UpdateMovieModal);
 
- // export default connect(mapStateToProps)(UpdateMovieModal);
+// export default connect(mapStateToProps)(UpdateMovieModal);
 
 
