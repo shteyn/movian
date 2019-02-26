@@ -9,25 +9,56 @@
   justify-content: space-between;
 }
 
-
+@keyframes to-right {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
 
 .modal-content {
   border-radius: 15px;
+
   .secondDivModal {
     display: flex;
+
     .contentDiv {
       margin: 0 20px;
       width: 100%;
+      .spanYear{
+        animation: to-right 0.9s ease-out;
+      }
+      .spanDescription{
+        animation: to-right 1.3s ease-out;
+        max-width: 500px;
+      }
+      .spanActor{
+        animation: to-right 1.5s ease-out;
+      }
+      .spanButton{
+        animation: to-right 1.3s ease-out;
+      }
     }
-    .modal-header {
 
+    .modal-header {
+      padding-left: 0;
+      margin-bottom: 10px;
+      animation: to-right 0.9s ease-out alternate;
     }
+
     .imgDiv {
-      margin-top: -50px;
-      margin-left: -50px;
+      margin-top: -10%;
+      margin-left: -6%;
+      z-index: 10;
+
       img {
+        border-radius: 7px;
         width: 300px;
-        height: 420px;
+        height: 480px;
       }
     }
   }
@@ -35,6 +66,7 @@
   .VideoContainer {
     width: 100%;
   }
+
   .react-player {
     width: 860px;
   }
@@ -49,8 +81,9 @@
   z-index: 99999;
   top: 0;
   left: 0;
+
   .react-player {
-    max-width: 1200px;
+    max-width: 1090px;
     max-height: 600px;
     position: absolute;
     top: 50%;

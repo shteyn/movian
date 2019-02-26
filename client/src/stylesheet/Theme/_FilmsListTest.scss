@@ -1,8 +1,9 @@
 .divContainer {
-  max-width: 1500px;
+  max-width: 1480px;
   margin: 100px auto;
   display: flex;
   flex-wrap: wrap;
+  z-index: 10;
   .films-list {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +11,7 @@
   .imgDiv {
     cursor: pointer;
     img {
-      height: 190px;
+      height: 220px;
       width: 160px;
     }
   }

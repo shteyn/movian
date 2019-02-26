@@ -114,22 +114,28 @@ class Pagination extends React.Component {
 
         return (
             <div className="pagination">
-                <div className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(1)}><span className="ui-border-element">First</span></button>
+                <div className={pager.currentPage === 1 ? 'disabled' : ''} style={{zIndex: '9999'}}>
+                    <button className="previouslyPageButton" onClick={() => this.setPage(pager.currentPage - 1)}><img
+                        src={require("../img/leftArrow.png")} alt=""/></button>
                 </div>
-                <div className={pager.currentPage === 1 ? 'disabled' : ''}>
-                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.currentPage - 1)}><span className="ui-border-element">&larr; Previous</span></button>
-                </div>
-                {pager.pages.map((page, index) =>
-                    <div key={index} className={pager.currentPage === page ? 'active' : ''}>
-                        <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(page)}><span className="ui-border-element">{page}</span></button>
+                <div className="buttonCont">
+                    <div className={pager.currentPage === 1 ? 'disabled' : ''}>
+                        <button className="firstPageButton" onClick={() => this.setPage(1)}></button>
                     </div>
-                )}
-                <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.currentPage + 1)}><span className="ui-border-element">Next &rarr;</span></button>
+
+                    {pager.pages.map((page, index) =>
+                        <div key={index} className={pager.currentPage === page ? 'active' : ''}>
+                            <button className="currentPageButton" onClick={() => this.setPage(page)}></button>
+                        </div>
+                    )}
+
+                    <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
+                        <button className="lastPageButton" onClick={() => this.setPage(pager.totalPages)}></button>
+                    </div>
                 </div>
                 <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <button className="ui-box backwardBorderTrain" onClick={() => this.setPage(pager.totalPages)}><span className="ui-border-element">Last</span></button>
+                    <button className="nextPageButton" onClick={() => this.setPage(pager.currentPage + 1)}><img
+                        src={require("../img/rightArrow.png")} alt=""/></button>
                 </div>
             </div>
         );

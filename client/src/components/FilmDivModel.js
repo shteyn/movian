@@ -71,7 +71,7 @@ class FilmDivModel extends Component {
         if (this.state.showPlayer === true) {
             reactPlayer =
                 <div className="reactPlayerCont" onClick={this.hidePlayerHandler}>
-                    <ReactPlayer url={film.video} className='react-player' width='100%' height='100%' />
+                    <ReactPlayer url={film.video} className='react-player' width='100%' height='100%' controls playing/>
                 </div>
         }
 
@@ -89,16 +89,16 @@ class FilmDivModel extends Component {
                                 <div className="contentDiv">
                                     <ModalHeader toggle={this.toggle}>{film.name}</ModalHeader>
                                     <FormGroup>
-                                        <Label for="Year">Year: {film.year}</Label>
+                                        <Label for="Year" className="spanYear"><span>Year: {film.year}</span></Label>
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="description">Description: {film.description}</Label>
+                                        <Label for="description" className="spanDescription"><span>Description: {film.description}</span></Label>
 
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="actor">Actor: {film.actor}</Label>
+                                        <Label for="actor" className="spanActor"><span>Actor: {film.actor}</span></Label>
                                     </FormGroup>
-                                    <Button onClick={this.showPlayerHandler}>Watch Trailer</Button>
+                                    <span className="spanButton"><Button onClick={this.showPlayerHandler}>Watch Trailer</Button></span>
                                 </div>
                             </div>
 
