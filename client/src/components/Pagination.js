@@ -10,7 +10,7 @@ const propTypes = {
 
 const defaultProps = {
     initialPage: 1,
-    pageSize: 16
+    pageSize: 14
 };
 
 class Pagination extends React.Component {
@@ -59,7 +59,7 @@ class Pagination extends React.Component {
         currentPage = currentPage || 1;
 
         // default page size is 10
-        pageSize = pageSize || 16;
+        pageSize = pageSize || 14;
 
         // calculate total pages
         let totalPages = Math.ceil(totalFilms / pageSize);
@@ -115,7 +115,7 @@ class Pagination extends React.Component {
         return (
             <div className="pagination">
                 <div className={pager.currentPage === 1 ? 'disabled' : ''} style={{zIndex: '9999'}}>
-                    <button className="previouslyPageButton" onClick={() => this.setPage(pager.currentPage - 1)}><img
+                    <button className="previouslyPageButton testButtonLeft" onClick={() => this.setPage(pager.currentPage - 1)}><img
                         src={require("../img/leftArrow.png")} alt=""/></button>
                 </div>
                 <div className="buttonCont">
@@ -134,7 +134,7 @@ class Pagination extends React.Component {
                     </div>
                 </div>
                 <div className={pager.currentPage === pager.totalPages ? 'disabled' : ''}>
-                    <button className="nextPageButton" onClick={() => this.setPage(pager.currentPage + 1)}><img
+                    <button className="nextPageButton testButtonRight" onClick={() => this.setPage(pager.currentPage + 1)}><img
                         src={require("../img/rightArrow.png")} alt=""/></button>
                 </div>
             </div>

@@ -2,28 +2,35 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FilmModal from "./FilmModel";
 import LogIn from "./LogIn";
-// import SignUp from "./SignUp";
-
+import Search from "./Search"
 import {
     Container,
     Collapse,
     Navbar,
     NavbarToggler,
     NavbarBrand,
-    Input,
+    // Input,
     Nav,
     NavItem,
     NavLink
 } from "reactstrap";
 
 export default class Example extends Component {
-    state = {
-        isOpen: false
-    };
+    constructor(props){
+        super(props);
+        this.state = {
+            isOpen: false
+        };
+    }
     toggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
         });
+    };
+
+    searchChanged = (query) => {
+        this.props.searchChanged(query)
+        // console.log(query);
     };
 
     render() {
@@ -31,7 +38,7 @@ export default class Example extends Component {
             <Container className="AppNavbarContainer">
                 <Navbar color="dark" dark expand="md" className="md-5">
                     <NavbarBrand href="/" style={{color: "whitesmoke"}}>Movian</NavbarBrand>
-                    <NavbarBrand><Input placeholder={"Search..."}/></NavbarBrand>
+                    <NavbarBrand className="divSearchCont"><Search searchChanged={this.searchChanged}/></NavbarBrand>
                     {/*<NavbarBrand href="/film-list-test" style={{color: "whitesmoke"}}>FilmsListTest</NavbarBrand>*/}
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>

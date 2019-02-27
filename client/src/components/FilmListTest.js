@@ -74,6 +74,14 @@ class FilmsListTest extends Component {
 
     render() {
         let {films} = this.props.film;
+        const filteredMovies = this.state.pageOfFilms.filter(
+            (film) => {
+                if(this.props.query === '') {
+                    return true;
+                }
+                return film.name.toLowerCase().indexOf (this.props.query.toLowerCase()) !== -1
+            }
+        );
         return (
             <div>
                 <FilmDivModel
@@ -84,11 +92,11 @@ class FilmsListTest extends Component {
                 <Container className="divContainer">
                     <div
                         className="films-list">
-                        {this.state.pageOfFilms.map((oneFilm) => {
+                        {filteredMovies.map((oneFilm) => {
                             return (
                                 <div
                                     key={oneFilm._id}>
-                                    <ListGroupItem className="mt-4">
+                                    <ListGroupItem className="divFilmItem">
                                         <div className="imgDiv" onClick={() => {
                                             this.showDisplayHandler(oneFilm)
                                         }}>
@@ -116,8 +124,8 @@ class FilmsListTest extends Component {
                             )
                         })}
                     </div>
+                    <Pagination onChangePage={this.onChangePage} films={films}/>
                 </Container>
-                <Pagination onChangePage={this.onChangePage} films={films}/>
             </div>
         );
     }

@@ -33,21 +33,21 @@
         animation: to-right 0.9s ease-out;
       }
       .spanDescription{
-        animation: to-right 1.3s ease-out;
+        animation: to-right 0.9s ease-out;
         max-width: 500px;
       }
       .spanActor{
-        animation: to-right 1.5s ease-out;
+        animation: to-right 0.9s ease-out;
       }
       .spanButton{
-        animation: to-right 1.3s ease-out;
+        animation: to-right 0.9s ease-out;
       }
     }
 
     .modal-header {
       padding-left: 0;
       margin-bottom: 10px;
-      animation: to-right 0.9s ease-out alternate;
+      animation: to-right 0.5s ease-out alternate;
     }
 
     .imgDiv {

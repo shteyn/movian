@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a8367b-d397-44fa-a3bf-dc18d4d68e54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AppNavbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/FilmListTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmListTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/img/bgmovian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_AppNavbar.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_AppNavbar.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_Pagination.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_Pagination.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" afterDir="false" />
@@ -26,29 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
+        <entry file="file://$PROJECT_DIR$/client/src/components/FilmModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="86" column="48" lean-forward="true" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
+            <state relative-caret-position="210">
+              <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -59,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+            <state relative-caret-position="510">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -68,11 +55,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="415">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,6 +76,7 @@
       <find>.pagination</find>
       <find>getOneFilmData</find>
       <find>update</find>
+      <find>my-4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,12 +95,9 @@
         <option value="$PROJECT_DIR$/client/src/App.css" />
         <option value="$PROJECT_DIR$/client/src/components/just_copy.js" />
         <option value="$PROJECT_DIR$/client/src/components/UI/Button.js" />
-        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" />
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsList.scss" />
-        <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/components/FilmsList.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/filmReducer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/AppNavbar.js" />
         <option value="$PROJECT_DIR$/client/src/components/LogIn.js" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/public/index.html" />
@@ -121,14 +109,18 @@
         <option value="$PROJECT_DIR$/routes/api/films.js" />
         <option value="$PROJECT_DIR$/client/src/components/ReactPlayer.js" />
         <option value="$PROJECT_DIR$/client/src/components/ReactPlayerComponent.js" />
-        <option value="$PROJECT_DIR$/client/src/components/FilmListTest.js" />
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_UpdateMovieModal.scss" />
         <option value="$PROJECT_DIR$/client/src/components/UpdateMovieModal.js" />
-        <option value="$PROJECT_DIR$/client/src/components/FilmDivModel.js" />
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" />
-        <option value="$PROJECT_DIR$/client/src/components/Pagination.js" />
-        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" />
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" />
+        <option value="$PROJECT_DIR$/client/src/components/Pagination.js" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
+        <option value="$PROJECT_DIR$/client/src/components/Search.js" />
+        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" />
+        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" />
+        <option value="$PROJECT_DIR$/client/src/components/AppNavbar.js" />
+        <option value="$PROJECT_DIR$/client/src/components/FilmListTest.js" />
+        <option value="$PROJECT_DIR$/client/src/components/FilmDivModel.js" />
       </list>
     </option>
   </component>
@@ -201,23 +193,6 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="stylesheet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movian" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheet" type="462c0819:PsiDirectoryNode" />
-              <item name=".sass-cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="movian" type="b2602c69:ProjectViewProjectNode" />
-              <item name="movian" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheet" type="462c0819:PsiDirectoryNode" />
-              <item name=".sass-cache" type="462c0819:PsiDirectoryNode" />
-              <item name="7184aae34a4620b5134a7cbf46b361b5d16afd66" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movian" type="b2602c69:ProjectViewProjectNode" />
@@ -313,17 +288,38 @@
       <option name="project" value="LOCAL" />
       <updated>1551169880658</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added style for buttons">
+      <created>1551193338480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551193338480</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added style for buttons">
+      <created>1551193348709</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551193348709</updated>
+    </task>
+    <task id="LOCAL-00005" summary="images for buttons">
+      <created>1551193370505</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551193370505</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132831000" />
+    <option name="totallyTimeSpent" value="146322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1366" height="715" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.267312" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2300819" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -335,8 +331,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.12286689" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.051194537" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.60750854" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.19795223" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -352,7 +348,9 @@
     <MESSAGE value="Was something modified!" />
     <MESSAGE value="working on layout for film cards!" />
     <MESSAGE value="added styling for film model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added styling for film model" />
+    <MESSAGE value="added style for buttons" />
+    <MESSAGE value="images for buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="images for buttons" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/components/UI/CardComponent.js" />
@@ -370,13 +368,6 @@
     <entry file="file://$PROJECT_DIR$/client/src/components/UI/Button.js" />
     <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmModel.scss">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SignUp.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -442,16 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/FilmModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -460,13 +441,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#76#116#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -533,38 +507,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/ReactPlayerComponent.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/components/AppNavbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="50" lean-forward="true" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#141#180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/FilmsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="66" column="48" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_App.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_UpdateMovieModal.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -582,33 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="86" column="48" lean-forward="true" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -616,27 +531,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/FilmsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Pagination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="116" column="96" selection-start-line="116" selection-start-column="96" selection-end-line="116" selection-end-column="96" />
+        <state relative-caret-position="265">
+          <caret line="126" column="95" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="95" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_App.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss">
+    <entry file="file://$PROJECT_DIR$/client/src/components/Search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        <state relative-caret-position="204">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/AppNavbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/FilmModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
