@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84a8367b-d397-44fa-a3bf-dc18d4d68e54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AppNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AppNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmDivModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/FilmListTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FilmListTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_AppNavbar.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_AppNavbar.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmDivModel.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_FilmsListTest.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_Pagination.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/.sass-cache/7184aae34a4620b5134a7cbf46b361b5d16afd66/_Pagination.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,10 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/FilmModel.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/AppNavbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
+            <state relative-caret-position="255">
+              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -44,25 +33,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="405">
+              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
+        <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -115,26 +101,27 @@
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss" />
         <option value="$PROJECT_DIR$/client/src/components/Pagination.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/components/Search.js" />
         <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss" />
-        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" />
         <option value="$PROJECT_DIR$/client/src/components/AppNavbar.js" />
         <option value="$PROJECT_DIR$/client/src/components/FilmListTest.js" />
         <option value="$PROJECT_DIR$/client/src/components/FilmDivModel.js" />
+        <option value="$PROJECT_DIR$/client/src/components/Search.js" />
+        <option value="$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="y" value="-2" />
-    <option name="width" value="1920" />
-    <option name="height" value="1082" />
+    <option name="x" value="3286" />
+    <option name="y" value="25" />
+    <option name="width" value="1280" />
+    <option name="height" value="944" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,12 +208,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testingRouter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -273,6 +259,7 @@
       <workItem from="1550657089787" duration="10079000" />
       <workItem from="1550668846962" duration="34720000" />
       <workItem from="1551005393654" duration="9831000" />
+      <workItem from="1551691451166" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="Was something modified!">
       <created>1550762388282</created>
@@ -309,30 +296,36 @@
       <option name="project" value="LOCAL" />
       <updated>1551193370505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added search filter and style for pagination modified">
+      <created>1551277943892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551277943892</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146322000" />
+    <option name="totallyTimeSpent" value="149030000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-2" width="1366" height="715" extended-state="6" />
-    <editor active="true" />
+    <frame x="3286" y="25" width="1280" height="944" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2300819" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22991249" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32423207" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3239264" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.60750854" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.19795223" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.401227" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.197546" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -350,7 +343,8 @@
     <MESSAGE value="added styling for film model" />
     <MESSAGE value="added style for buttons" />
     <MESSAGE value="images for buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="images for buttons" />
+    <MESSAGE value="added search filter and style for pagination modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="added search filter and style for pagination modified" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/client/src/components/UI/CardComponent.js" />
@@ -531,20 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/actions/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -579,50 +559,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/AppNavbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/FilmModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="1065">
           <caret line="119" column="63" selection-start-line="119" selection-start-column="63" selection-end-line="119" selection-end-column="63" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -630,10 +569,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_Pagination.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="188" column="5" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmsListTest.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_FilmDivModel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/FilmListTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        <state relative-caret-position="1890">
+          <caret line="126" column="77" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="77" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -642,11 +605,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/FilmDivModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="1785">
           <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/AppNavbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stylesheet/Theme/_AppNavbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -25,8 +25,7 @@ class Search extends React.Component {
     render() {
         return (
             <div className="divSearch">
-                <FormGroup>
-                    <Label for="searching" />
+                <FormGroup className="inputCont">
                     <Input
                         type="text"
                         value={this.state.search}
