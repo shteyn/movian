@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const films = require("./routes/api/films"); //--> imports Routes file, and we are using it in /api/films.js(api)
+const userRoute = require('./routes/users/users');
 
 /***Init App***/
 const app = express();
@@ -29,6 +30,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+app.use(userRoute);
+app.use(express.static('client'));
 /***Port initialization***/
 const port = process.env.PORT || 5000;
+
 app.listen(port, () => console.log(`Server running on port ${port}`)); //--> Starting the Server
+
+

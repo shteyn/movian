@@ -64,21 +64,21 @@ class LogIn extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalBody>
 
-                        <div className="PageSwitcher">
-                            <Button
-                                activeClassName="PageSwitcher__Item--Active"
-                                className="PageSwitcher__Item"
-                            >
-                                Log In
-                            </Button>
-                            &nbsp;or&nbsp;
-                            <Button
-                                activeClassName="PageSwitcher__Item--Active"
-                                className="PageSwitcher__Item"
-                            >
-                                Sign Up
-                            </Button>
-                        </div>
+                        {/*<div className="PageSwitcher">*/}
+                            {/*<Button*/}
+                                {/*activeClassName="PageSwitcher__Item--Active"*/}
+                                {/*className="PageSwitcher__Item"*/}
+                            {/*>*/}
+                                {/*Log In*/}
+                            {/*</Button>*/}
+                            {/*&nbsp;or&nbsp;*/}
+                            {/*<Button*/}
+                                {/*activeClassName="PageSwitcher__Item--Active"*/}
+                                {/*className="PageSwitcher__Item"*/}
+                            {/*>*/}
+                                {/*Sign Up*/}
+                            {/*</Button>*/}
+                        {/*</div>*/}
 
                         <br/>
                         <Form onSubmit={this.handleSubmit}>
